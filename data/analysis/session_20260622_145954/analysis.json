@@ -1,0 +1,4701 @@
+{
+  "analysis_cache_version": "phase2_controlled_freshness_v1",
+  "source_session": "data\\raw\\session_20260622_145954",
+  "source_manifest": {
+    "session_id": "session_20260622_145954",
+    "generated_at": "2026-06-22T15:02:16.888003+00:00",
+    "config": {
+      "date_range": {
+        "from": "2025-03-06",
+        "to": "2026-06-22"
+      },
+      "target_usable_per_source": 300,
+      "candidate_limit_per_source": 600,
+      "configured_usable_target_per_source": 300,
+      "min_words": 20,
+      "enabled_sources": [
+        "app_store",
+        "play_store",
+        "reddit",
+        "youtube",
+        "spotify_community"
+      ]
+    },
+    "sources": [
+      {
+        "source": "app_store",
+        "raw_count": 442,
+        "usable_count": 300,
+        "filtered_count": 142,
+        "output_path": "data\\raw\\session_20260622_145954\\app_store.json",
+        "searches": [],
+        "errors": []
+      },
+      {
+        "source": "play_store",
+        "raw_count": 437,
+        "usable_count": 300,
+        "filtered_count": 137,
+        "output_path": "data\\raw\\session_20260622_145954\\play_store.json",
+        "searches": [],
+        "errors": []
+      },
+      {
+        "source": "reddit",
+        "raw_count": 309,
+        "usable_count": 300,
+        "filtered_count": 9,
+        "output_path": "data\\raw\\session_20260622_145954\\reddit.json",
+        "searches": [
+          "spotify recommendations",
+          "spotify algorithm",
+          "spotify discover weekly",
+          "spotify same songs",
+          "spotify music discovery",
+          "spotify discover weekly recommendations",
+          "spotify algorithm same songs over and over",
+          "spotify cant find new music similar artists",
+          "spotify recommendations dont match my taste",
+          "spotify genre wrong mainstream boring",
+          "spotify ai dj repeats songs",
+          "spotify taste profile ruined recommendations",
+          "spotify music discovery workaround playlist radio",
+          "spotify switched to apple music recommendations discovery"
+        ],
+        "errors": []
+      },
+      {
+        "source": "youtube",
+        "raw_count": 570,
+        "usable_count": 300,
+        "filtered_count": 270,
+        "output_path": "data\\raw\\session_20260622_145954\\youtube.json",
+        "searches": [
+          "Spotify recommendations same songs",
+          "Spotify algorithm bad recommendations",
+          "Spotify Discover Weekly got worse",
+          "Spotify AI DJ repeating songs",
+          "Spotify taste profile recommendations",
+          "Why Spotify keeps playing the same songs",
+          "Spotify music discovery alternatives",
+          "How to discover new music on Spotify"
+        ],
+        "errors": []
+      },
+      {
+        "source": "spotify_community",
+        "raw_count": 349,
+        "usable_count": 300,
+        "filtered_count": 49,
+        "output_path": "data\\raw\\session_20260622_145954\\spotify_community.json",
+        "searches": [
+          "recommendations",
+          "music discovery",
+          "algorithm recommendations",
+          "repeating songs",
+          "playlist recommendations",
+          "bad recommendations",
+          "same songs recommendations",
+          "Discover Weekly same songs",
+          "AI DJ repeats songs",
+          "taste profile recommendations",
+          "autoplay repeats same songs",
+          "radio recommendations same artists",
+          "feature request music discovery"
+        ],
+        "errors": []
+      }
+    ],
+    "total_raw": 2107,
+    "total_usable": 1500
+  },
+  "aggregate": {
+    "summary": {
+      "total_extractions": 1500,
+      "quantitative_records": 807,
+      "low_confidence_or_failed": 693,
+      "sources": {
+        "app_store": 154,
+        "play_store": 129,
+        "reddit": 245,
+        "spotify_community": 242,
+        "youtube": 37
+      }
+    },
+    "q1_discovery_barriers": {
+      "ranked_barriers": [
+        {
+          "barrier": "algorithmic",
+          "weighted_mentions": 2491.1,
+          "percentage": 67.7
+        },
+        {
+          "barrier": "trust",
+          "weighted_mentions": 446.8,
+          "percentage": 12.1
+        },
+        {
+          "barrier": "unclear",
+          "weighted_mentions": 371.59,
+          "percentage": 10.1
+        },
+        {
+          "barrier": "surface",
+          "weighted_mentions": 204.36,
+          "percentage": 5.6
+        },
+        {
+          "barrier": "cognitive",
+          "weighted_mentions": 167.81,
+          "percentage": 4.6
+        }
+      ],
+      "ranked_pm_barriers": [
+        {
+          "barrier": "repetition_fatigue",
+          "severity_weight": 935.67,
+          "percentage": 25.4
+        },
+        {
+          "barrier": "lack_of_control",
+          "severity_weight": 855.4,
+          "percentage": 23.2
+        },
+        {
+          "barrier": "low_recommendation_trust",
+          "severity_weight": 714.33,
+          "percentage": 19.4
+        },
+        {
+          "barrier": "unclear",
+          "severity_weight": 366.66,
+          "percentage": 10.0
+        },
+        {
+          "barrier": "over_personalization",
+          "severity_weight": 358.31,
+          "percentage": 9.7
+        },
+        {
+          "barrier": "hidden_discovery_paths",
+          "severity_weight": 219.34,
+          "percentage": 6.0
+        },
+        {
+          "barrier": "mood_mismatch",
+          "severity_weight": 160.73,
+          "percentage": 4.4
+        },
+        {
+          "barrier": "regional_language_mismatch",
+          "severity_weight": 71.23,
+          "percentage": 1.9
+        }
+      ],
+      "novelty_safety_distribution": [
+        {
+          "state": "too_familiar",
+          "severity_weight": 1101.01,
+          "percentage": 29.9
+        },
+        {
+          "state": "too_unfamiliar",
+          "severity_weight": 953.19,
+          "percentage": 25.9
+        },
+        {
+          "state": "unclear",
+          "severity_weight": 683.0,
+          "percentage": 18.6
+        },
+        {
+          "state": "wants_safe_novelty",
+          "severity_weight": 626.35,
+          "percentage": 17.0
+        },
+        {
+          "state": "comfort_preferred",
+          "severity_weight": 318.1,
+          "percentage": 8.6
+        }
+      ],
+      "by_source": {
+        "app_store": [
+          {
+            "category": "algorithmic",
+            "severity_weight": 419.44,
+            "percentage": 75.8
+          },
+          {
+            "category": "unclear",
+            "severity_weight": 77.31,
+            "percentage": 14.0
+          },
+          {
+            "category": "cognitive",
+            "severity_weight": 22.55,
+            "percentage": 4.1
+          },
+          {
+            "category": "surface",
+            "severity_weight": 18.86,
+            "percentage": 3.4
+          },
+          {
+            "category": "trust",
+            "severity_weight": 15.34,
+            "percentage": 2.8
+          }
+        ],
+        "play_store": [
+          {
+            "category": "algorithmic",
+            "severity_weight": 423.75,
+            "percentage": 81.1
+          },
+          {
+            "category": "unclear",
+            "severity_weight": 67.72,
+            "percentage": 13.0
+          },
+          {
+            "category": "surface",
+            "severity_weight": 17.53,
+            "percentage": 3.4
+          },
+          {
+            "category": "cognitive",
+            "severity_weight": 7.42,
+            "percentage": 1.4
+          },
+          {
+            "category": "trust",
+            "severity_weight": 6.39,
+            "percentage": 1.2
+          }
+        ],
+        "reddit": [
+          {
+            "category": "algorithmic",
+            "severity_weight": 935.47,
+            "percentage": 65.0
+          },
+          {
+            "category": "trust",
+            "severity_weight": 209.69,
+            "percentage": 14.6
+          },
+          {
+            "category": "unclear",
+            "severity_weight": 144.79,
+            "percentage": 10.1
+          },
+          {
+            "category": "surface",
+            "severity_weight": 97.57,
+            "percentage": 6.8
+          },
+          {
+            "category": "cognitive",
+            "severity_weight": 51.35,
+            "percentage": 3.6
+          }
+        ],
+        "spotify_community": [
+          {
+            "category": "algorithmic",
+            "severity_weight": 631.3,
+            "percentage": 61.0
+          },
+          {
+            "category": "trust",
+            "severity_weight": 193.69,
+            "percentage": 18.7
+          },
+          {
+            "category": "cognitive",
+            "severity_weight": 86.49,
+            "percentage": 8.4
+          },
+          {
+            "category": "surface",
+            "severity_weight": 70.4,
+            "percentage": 6.8
+          },
+          {
+            "category": "unclear",
+            "severity_weight": 52.77,
+            "percentage": 5.1
+          }
+        ],
+        "youtube": [
+          {
+            "category": "algorithmic",
+            "severity_weight": 81.14,
+            "percentage": 61.5
+          },
+          {
+            "category": "unclear",
+            "severity_weight": 29.0,
+            "percentage": 22.0
+          },
+          {
+            "category": "trust",
+            "severity_weight": 21.7,
+            "percentage": 16.5
+          }
+        ]
+      },
+      "algorithmic_feature_heatmap": [
+        {
+          "feature": "Shuffle",
+          "weighted_mentions": 172.97
+        },
+        {
+          "feature": "Discover Weekly",
+          "weighted_mentions": 98.29
+        },
+        {
+          "feature": "Radio",
+          "weighted_mentions": 68.58
+        },
+        {
+          "feature": "DJ",
+          "weighted_mentions": 64.64
+        },
+        {
+          "feature": "AI DJ",
+          "weighted_mentions": 57.65
+        },
+        {
+          "feature": "Autoplay",
+          "weighted_mentions": 55.88
+        },
+        {
+          "feature": "Daily Mix",
+          "weighted_mentions": 49.48
+        },
+        {
+          "feature": "Taste Profile",
+          "weighted_mentions": 48.57
+        },
+        {
+          "feature": "Liked Songs",
+          "weighted_mentions": 45.97
+        },
+        {
+          "feature": "Release Radar",
+          "weighted_mentions": 29.29
+        },
+        {
+          "feature": "Home",
+          "weighted_mentions": 26.72
+        },
+        {
+          "feature": "Daylist",
+          "weighted_mentions": 12.42
+        },
+        {
+          "feature": "Blend",
+          "weighted_mentions": 5.56
+        },
+        {
+          "feature": "Search",
+          "weighted_mentions": 2.39
+        },
+        {
+          "feature": "Playlist",
+          "weighted_mentions": 1.95
+        },
+        {
+          "feature": "Smart Shuffle",
+          "weighted_mentions": 1.55
+        }
+      ],
+      "top_quotes": {
+        "algorithmic": [
+          {
+            "quote": "my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.817
+          },
+          {
+            "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often... I want a curated playlist -- not something that's already conforming to my preferences.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.557
+          },
+          {
+            "quote": "The music recommendations keep showing me the same songs over and over again, and all of them are ones I don't enjoy.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.528
+          }
+        ],
+        "trust": [
+          {
+            "quote": "Absolute GARBAGE AI music appeared in my Discover Weekly today for the first time.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.9
+          },
+          {
+            "quote": "Today I turned Discover Weekly on and by far 70% of the playlist is AI slop.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.881
+          },
+          {
+            "quote": "I got tired of Spotify's algorithm pushing fake AI artists, so I built a tracker.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.857
+          }
+        ],
+        "surface": [
+          {
+            "quote": "I check what’s new from the hundreds of small bands that I follow and suddenly that option vanished.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.384
+          },
+          {
+            "quote": "Trying to understand the actual chronological discography of an artist is often confusing",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.799
+          },
+          {
+            "quote": "finding new releases on Spotify has become difficult",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.671
+          }
+        ],
+        "unclear": [
+          {
+            "quote": "I'm reorganizing my Spotify playlists using my most in depth organizational scheme yet.",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.339
+          },
+          {
+            "quote": "when i play it spotify decides to play something similar to my playlist.",
+            "source": "app_store",
+            "severity": 5,
+            "signal_weight": 1.468
+          },
+          {
+            "quote": "when i play it spotify decides to play something similar to my playlist.",
+            "source": "app_store",
+            "severity": 5,
+            "signal_weight": 1.468
+          }
+        ],
+        "cognitive": [
+          {
+            "quote": "Now whenever I open Spotify I just sit there not knowing what to play anymore",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.684
+          },
+          {
+            "quote": "I’m trying to streamline my “best new songs of the month” process on Spotify, but it’s getting pretty time-consuming.",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.307
+          },
+          {
+            "quote": "Looking for playlists that are consistent and can just play without needing to skip — not too algorithm-heavy.",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.159
+          }
+        ]
+      }
+    },
+    "q2_recommendation_frustrations": {
+      "ongoing_ranked": [
+        {
+          "frustration": "filter_bubble_lock_in",
+          "severity_weight": 1542.35,
+          "percentage": 38.1
+        },
+        {
+          "frustration": "wrong_context_genre_blending",
+          "severity_weight": 540.48,
+          "percentage": 13.4
+        },
+        {
+          "frustration": "taste_model_staleness",
+          "severity_weight": 494.87,
+          "percentage": 12.2
+        },
+        {
+          "frustration": "recommendation_opacity",
+          "severity_weight": 483.97,
+          "percentage": 12.0
+        },
+        {
+          "frustration": "popularity_bias",
+          "severity_weight": 361.7,
+          "percentage": 8.9
+        },
+        {
+          "frustration": "context_unawareness",
+          "severity_weight": 351.5,
+          "percentage": 8.7
+        },
+        {
+          "frustration": "autoplay_regression",
+          "severity_weight": 270.9,
+          "percentage": 6.7
+        }
+      ],
+      "resolved_background": [
+        {
+          "frustration": "filter_bubble_lock_in",
+          "severity_weight": 31.56,
+          "percentage": 56.0
+        },
+        {
+          "frustration": "wrong_context_genre_blending",
+          "severity_weight": 14.01,
+          "percentage": 24.9
+        },
+        {
+          "frustration": "recommendation_opacity",
+          "severity_weight": 4.68,
+          "percentage": 8.3
+        },
+        {
+          "frustration": "taste_model_staleness",
+          "severity_weight": 3.13,
+          "percentage": 5.6
+        },
+        {
+          "frustration": "autoplay_regression",
+          "severity_weight": 2.94,
+          "percentage": 5.2
+        }
+      ],
+      "user_facing_themes": [
+        {
+          "theme": "same_songs_repeating",
+          "severity_weight": 1078.75,
+          "percentage": 23.7
+        },
+        {
+          "theme": "playlist_predictability",
+          "severity_weight": 667.47,
+          "percentage": 14.7
+        },
+        {
+          "theme": "shuffle_non_random",
+          "severity_weight": 577.88,
+          "percentage": 12.7
+        },
+        {
+          "theme": "discover_weekly_stale",
+          "severity_weight": 453.32,
+          "percentage": 10.0
+        },
+        {
+          "theme": "mood_mismatch",
+          "severity_weight": 435.79,
+          "percentage": 9.6
+        },
+        {
+          "theme": "taste_profile_outdated",
+          "severity_weight": 401.86,
+          "percentage": 8.8
+        },
+        {
+          "theme": "too_mainstream",
+          "severity_weight": 350.66,
+          "percentage": 7.7
+        },
+        {
+          "theme": "known_artists_dominating",
+          "severity_weight": 347.74,
+          "percentage": 7.6
+        },
+        {
+          "theme": "radio_too_narrow",
+          "severity_weight": 132.0,
+          "percentage": 2.9
+        },
+        {
+          "theme": "regional_mismatch",
+          "severity_weight": 107.27,
+          "percentage": 2.4
+        }
+      ],
+      "severity_distribution": {
+        "context_unawareness": {
+          "count": 68,
+          "average": 3.12,
+          "high_severity_count": 26
+        },
+        "filter_bubble_lock_in": {
+          "count": 258,
+          "average": 3.3,
+          "high_severity_count": 97
+        },
+        "popularity_bias": {
+          "count": 60,
+          "average": 3.28,
+          "high_severity_count": 29
+        },
+        "recommendation_opacity": {
+          "count": 89,
+          "average": 3.02,
+          "high_severity_count": 29
+        },
+        "autoplay_regression": {
+          "count": 51,
+          "average": 3.24,
+          "high_severity_count": 21
+        },
+        "taste_model_staleness": {
+          "count": 82,
+          "average": 3.56,
+          "high_severity_count": 41
+        },
+        "wrong_context_genre_blending": {
+          "count": 99,
+          "average": 3.41,
+          "high_severity_count": 39
+        }
+      },
+      "top_quotes": {
+        "context_unawareness": [
+          {
+            "quote": "I despise swing and electroswing music with my entire being.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.404
+          },
+          {
+            "quote": "I have never listened to Steve fucking Bannon. Nor Candace fucking Owens. Or any of the rest of the lunatic sphere. Yet I constantly get them as recs.",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.624
+          },
+          {
+            "quote": "For three weeks the entire playlist was ska/reggae. I don't listen to or like either genre.",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.453
+          }
+        ],
+        "filter_bubble_lock_in": [
+          {
+            "quote": "and never something new",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.817
+          },
+          {
+            "quote": "How do you find playlists that don't keep you in a bubble of your own preferences on Spotify?",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.557
+          },
+          {
+            "quote": "The music recommendations keep showing me the same songs over and over again",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.528
+          }
+        ],
+        "popularity_bias": [
+          {
+            "quote": "“Fans also like” often feels extremely surface-level and popularity-driven rather than musically relevant",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.799
+          },
+          {
+            "quote": "kinda bad at surfacing the fun/weird corners of its catalog",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.528
+          },
+          {
+            "quote": "it feels like Spotify only wants to push whatever song is currently blowing up on TikTok/Instagram.",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.359
+          }
+        ],
+        "recommendation_opacity": [
+          {
+            "quote": "Absolute GARBAGE AI music appeared in my Discover Weekly",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.9
+          },
+          {
+            "quote": "70% of the playlist is AI slop",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.881
+          },
+          {
+            "quote": "pushing fake AI artists",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.857
+          }
+        ],
+        "autoplay_regression": [
+          {
+            "quote": "sneaking into... auto-play lately",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.857
+          },
+          {
+            "quote": "The song finished and Spotify started paying Rizzers, an Ai artist I already reported.",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.817
+          },
+          {
+            "quote": "penetrate me with your terrible recommendations",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 1.992
+          }
+        ],
+        "taste_model_staleness": [
+          {
+            "quote": "my suggestion algorithm was basically showing me the same artists as 2019",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.817
+          },
+          {
+            "quote": "I've had the same \"recommendations\" for almost a year now",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.776
+          },
+          {
+            "quote": "because my taste changed so much I don’t even like most of the songs in it anymore",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.684
+          }
+        ],
+        "wrong_context_genre_blending": [
+          {
+            "quote": "Spotify keeps recommending EDM instead of FB EDM",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.528
+          },
+          {
+            "quote": "my 90s playlist is full of actual salsa music, like 40% of the playlist is salsa now. I’ve never listened to salsa in my life",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.064
+          },
+          {
+            "quote": "I'm getting a mix of the kind of stuff I'd usually get recommended, plus a whole bunch of stuff in genre's I don't listen to",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.339
+          }
+        ]
+      }
+    },
+    "q3_listening_intents": {
+      "intent_matrix": [
+        {
+          "activity_context": "unclear",
+          "discovery_mode": "lean_back",
+          "count": 257,
+          "severity_sum": 1355.022,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "for it to now be forced upon me is insane when I'm already paying a premium.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.9
+            }
+          ]
+        },
+        {
+          "activity_context": "unclear",
+          "discovery_mode": "incidental",
+          "count": 153,
+          "severity_sum": 672.3360000000002,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "it just kept repeating the same ~300 songs on shuffle and never played the others",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.327
+            }
+          ]
+        },
+        {
+          "activity_context": "unclear",
+          "discovery_mode": "active",
+          "count": 138,
+          "severity_sum": 599.4689999999997,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "I want a curated playlist -- not something that's already conforming to my preferences.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.557
+            }
+          ]
+        },
+        {
+          "activity_context": "creative_work",
+          "discovery_mode": "active",
+          "count": 88,
+          "severity_sum": 329.97300000000007,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "So this is what I usually do to basically force Spotify into giving me new songs",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.893
+            }
+          ]
+        },
+        {
+          "activity_context": "unclear",
+          "discovery_mode": "unclear",
+          "count": 60,
+          "severity_sum": 201.53199999999993,
+          "dominant_frustration": "context_unawareness",
+          "representative_quote": [
+            {
+              "quote": "I have some random playlists and songs on Spotify that I never heard about.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 1.884
+            }
+          ]
+        },
+        {
+          "activity_context": "commuting_or_traveling",
+          "discovery_mode": "lean_back",
+          "count": 11,
+          "severity_sum": 61.63100000000001,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.817
+            }
+          ]
+        },
+        {
+          "activity_context": "social_listening",
+          "discovery_mode": "lean_back",
+          "count": 9,
+          "severity_sum": 52.440999999999995,
+          "dominant_frustration": "taste_model_staleness",
+          "representative_quote": [
+            {
+              "quote": "I feel like discovering new music has kind of plateaued where my all my mixes have the same music that are saved in my playlists",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 1.952
+            }
+          ]
+        },
+        {
+          "activity_context": "commuting_or_traveling",
+          "discovery_mode": "active",
+          "count": 10,
+          "severity_sum": 43.039,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "I've been actively combatting this intersection of decreasing neuroplasticity, desire for the comfortable, and media manipulation ever since.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.512
+            }
+          ]
+        },
+        {
+          "activity_context": "falling_asleep_or_winding_down",
+          "discovery_mode": "lean_back",
+          "count": 7,
+          "severity_sum": 37.357,
+          "dominant_frustration": "context_unawareness",
+          "representative_quote": [
+            {
+              "quote": "Looking for playlists that are consistent and can just play without needing to skip — not too algorithm-heavy.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.159
+            }
+          ]
+        },
+        {
+          "activity_context": "social_listening",
+          "discovery_mode": "active",
+          "count": 7,
+          "severity_sum": 31.139999999999997,
+          "dominant_frustration": "context_unawareness",
+          "representative_quote": [
+            {
+              "quote": "what actually resonates with you right now",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.204
+            }
+          ]
+        },
+        {
+          "activity_context": "focused_work_or_studying",
+          "discovery_mode": "lean_back",
+          "count": 6,
+          "severity_sum": 28.575,
+          "dominant_frustration": "wrong_context_genre_blending",
+          "representative_quote": [
+            {
+              "quote": "begin my journey of discovery",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.453
+            }
+          ]
+        },
+        {
+          "activity_context": "background_fill",
+          "discovery_mode": "lean_back",
+          "count": 6,
+          "severity_sum": 27.446,
+          "dominant_frustration": "autoplay_regression",
+          "representative_quote": [
+            {
+              "quote": "continue with recommended songs... algo pushes the SAME 12 SONGS",
+              "source": "play_store",
+              "severity": 5,
+              "signal_weight": 1.72
+            }
+          ]
+        },
+        {
+          "activity_context": "relaxing_at_home_passively",
+          "discovery_mode": "active",
+          "count": 3,
+          "severity_sum": 25.23,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "Every single morning when I wake up I check what’s new from the hundreds of small bands that I follow",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.384
+            }
+          ]
+        },
+        {
+          "activity_context": "focused_work_or_studying",
+          "discovery_mode": "incidental",
+          "count": 5,
+          "severity_sum": 21.126,
+          "dominant_frustration": "autoplay_regression",
+          "representative_quote": [
+            {
+              "quote": "i have a playlist with two so gs I am learning. I just want to play these two songs.",
+              "source": "spotify_community",
+              "severity": 4,
+              "signal_weight": 1.55
+            }
+          ]
+        },
+        {
+          "activity_context": "social_listening",
+          "discovery_mode": "incidental",
+          "count": 3,
+          "severity_sum": 19.329,
+          "dominant_frustration": "context_unawareness",
+          "representative_quote": [
+            {
+              "quote": "I need to find a way to disable this - I haven't found a button or setting where I can turn these off.",
+              "source": "spotify_community",
+              "severity": 5,
+              "signal_weight": 1.55
+            }
+          ]
+        },
+        {
+          "activity_context": "creative_work",
+          "discovery_mode": "incidental",
+          "count": 3,
+          "severity_sum": 17.616,
+          "dominant_frustration": "wrong_context_genre_blending",
+          "representative_quote": [
+            {
+              "quote": "i make a play list of all of the songs (3) and when i play it spotify decides to play something similar to my playlist. I cant even practice anymore.",
+              "source": "app_store",
+              "severity": 5,
+              "signal_weight": 1.468
+            }
+          ]
+        },
+        {
+          "activity_context": "creative_work",
+          "discovery_mode": "unclear",
+          "count": 4,
+          "severity_sum": 17.5,
+          "dominant_frustration": "context_unawareness",
+          "representative_quote": [
+            {
+              "quote": "evenly spaces out artists in your playlists so you don’t get multiple songs from the same band in a row.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.609
+            }
+          ]
+        },
+        {
+          "activity_context": "commuting_or_traveling",
+          "discovery_mode": "incidental",
+          "count": 4,
+          "severity_sum": 17.430999999999997,
+          "dominant_frustration": "autoplay_regression",
+          "representative_quote": [
+            {
+              "quote": "Can't really play with my phone while driving to select the song from my playlist i want to listen",
+              "source": "play_store",
+              "severity": 5,
+              "signal_weight": 1.647
+            }
+          ]
+        },
+        {
+          "activity_context": "relaxing_at_home_passively",
+          "discovery_mode": "incidental",
+          "count": 5,
+          "severity_sum": 17.226,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "shuffle will play the exact same order no matter what i do",
+              "source": "play_store",
+              "severity": 4,
+              "signal_weight": 1.468
+            }
+          ]
+        },
+        {
+          "activity_context": "falling_asleep_or_winding_down",
+          "discovery_mode": "incidental",
+          "count": 3,
+          "severity_sum": 16.413,
+          "dominant_frustration": "taste_model_staleness",
+          "representative_quote": [
+            {
+              "quote": "put on a sleep podcast since I was having trouble falling asleep",
+              "source": "spotify_community",
+              "severity": 5,
+              "signal_weight": 1.55
+            }
+          ]
+        },
+        {
+          "activity_context": "relaxing_at_home_passively",
+          "discovery_mode": "lean_back",
+          "count": 2,
+          "severity_sum": 16.398,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "Lately though, no matter what I search I always get the same artists, the same songs",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.162
+            }
+          ]
+        },
+        {
+          "activity_context": "creative_work",
+          "discovery_mode": "lean_back",
+          "count": 1,
+          "severity_sum": 14.285,
+          "dominant_frustration": "recommendation_opacity",
+          "representative_quote": [
+            {
+              "quote": "I got tired of Spotify's algorithm pushing fake AI artists, so I built a tracker.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.857
+            }
+          ]
+        },
+        {
+          "activity_context": "focused_work_or_studying",
+          "discovery_mode": "active",
+          "count": 4,
+          "severity_sum": 11.663,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "I need playlists from other people cuz they always have better taste than I do.",
+              "source": "spotify_community",
+              "severity": 3,
+              "signal_weight": 1.55
+            }
+          ]
+        },
+        {
+          "activity_context": "background_fill",
+          "discovery_mode": "active",
+          "count": 3,
+          "severity_sum": 11.01,
+          "dominant_frustration": "filter_bubble_lock_in",
+          "representative_quote": [
+            {
+              "quote": "I got tired of hearing the same songs over and over from the radio and Spotify algorithms, so I made my own “radio.”",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 1.859
+            }
+          ]
+        },
+        {
+          "activity_context": "social_listening",
+          "discovery_mode": "unclear",
+          "count": 2,
+          "severity_sum": 10.850000000000001,
+          "dominant_frustration": "wrong_context_genre_blending",
+          "representative_quote": [
+            {
+              "quote": "Fast Account Switching in the Spotify App",
+              "source": "spotify_community",
+              "severity": 4,
+              "signal_weight": 1.55
+            }
+          ]
+        },
+        {
+          "activity_context": "background_fill",
+          "discovery_mode": "incidental",
+          "count": 4,
+          "severity_sum": 8.653,
+          "dominant_frustration": "autoplay_regression",
+          "representative_quote": [
+            {
+              "quote": "a clearer audible separation between the album and the Autoplay recommendations.",
+              "source": "spotify_community",
+              "severity": 2,
+              "signal_weight": 1.413
+            }
+          ]
+        },
+        {
+          "activity_context": "falling_asleep_or_winding_down",
+          "discovery_mode": "unclear",
+          "count": 1,
+          "severity_sum": 3.278,
+          "dominant_frustration": "context_unawareness",
+          "representative_quote": [
+            {
+              "quote": "I could have certain songs excluded from my Spotify Wrapped. Every year, mine is just songs I go to sleep to.",
+              "source": "play_store",
+              "severity": 2,
+              "signal_weight": 1.639
+            }
+          ]
+        },
+        {
+          "activity_context": "commuting_or_traveling",
+          "discovery_mode": "unclear",
+          "count": 2,
+          "severity_sum": 3.245,
+          "dominant_frustration": "unclear",
+          "representative_quote": [
+            {
+              "quote": "Android auto issues... if I have a bad cellular connection Spotify either refuses or takes forever and ever to load in playlists. Even if said playlist is fully downloaded.",
+              "source": "play_store",
+              "severity": 1,
+              "signal_weight": 1.777
+            }
+          ]
+        },
+        {
+          "activity_context": "background_fill",
+          "discovery_mode": "unclear",
+          "count": 2,
+          "severity_sum": 2.936,
+          "dominant_frustration": "unclear",
+          "representative_quote": [
+            {
+              "quote": "i want to listen to music while playing games",
+              "source": "app_store",
+              "severity": 1,
+              "signal_weight": 1.468
+            }
+          ]
+        },
+        {
+          "activity_context": "physical_exercise",
+          "discovery_mode": "incidental",
+          "count": 1,
+          "severity_sum": 2.68,
+          "dominant_frustration": "unclear",
+          "representative_quote": [
+            {
+              "quote": "Share your wrap here!",
+              "source": "reddit",
+              "severity": 1,
+              "signal_weight": 2.68
+            }
+          ]
+        },
+        {
+          "activity_context": "physical_exercise",
+          "discovery_mode": "active",
+          "count": 1,
+          "severity_sum": 2.033,
+          "dominant_frustration": "unclear",
+          "representative_quote": [
+            {
+              "quote": "I’m trying to make the best gym playlist on Spotify and I need some song recommendations",
+              "source": "reddit",
+              "severity": 1,
+              "signal_weight": 2.033
+            }
+          ]
+        },
+        {
+          "activity_context": "cooking_or_household_tasks",
+          "discovery_mode": "lean_back",
+          "count": 1,
+          "severity_sum": 1.468,
+          "dominant_frustration": "unclear",
+          "representative_quote": [
+            {
+              "quote": "My hands were occupied, so I couldn't add it in time.",
+              "source": "spotify_community",
+              "severity": 1,
+              "signal_weight": 1.468
+            }
+          ]
+        },
+        {
+          "activity_context": "cooking_or_household_tasks",
+          "discovery_mode": "active",
+          "count": 1,
+          "severity_sum": 1.33,
+          "dominant_frustration": "unclear",
+          "representative_quote": [
+            {
+              "quote": "cooking, cleaning, walking the dog, sleeping, sharing playlist with friends",
+              "source": "app_store",
+              "severity": 1,
+              "signal_weight": 1.33
+            }
+          ]
+        }
+      ],
+      "desired_outcomes": [
+        {
+          "outcome": "For the Discover Weekly playlist to be a reliable source of new music from human artists, free from low-quality AI-generated content.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.9
+        },
+        {
+          "outcome": "For Discover Weekly to be a source of genuine music discovery from new human artists, without being diluted by low-quality AI-generated content.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.881
+        },
+        {
+          "outcome": "To raise awareness about AI-generated artists and empower users to prevent their subscription fees from funding them, thereby supporting real artists.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.857
+        },
+        {
+          "outcome": "For the recommendation algorithm to provide fresh, new artist suggestions instead of repeating the same ones for years.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.817
+        },
+        {
+          "outcome": "To have access to editorially curated, non-personalized playlists for specific genres and eras, enabling genuine discovery outside of my listening bubble.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.557
+        },
+        {
+          "outcome": "For Spotify's recommendations to understand the nuances of their taste, like specific subgenres and melody, to suggest genuinely new and appealing songs.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.528
+        },
+        {
+          "outcome": "To have control over how much new vs. familiar music is recommended in passive listening features, via a simple control like a 'discovery tolerance' dial.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.497
+        },
+        {
+          "outcome": "For Spotify's recommendation algorithms to respect my explicit negative feedback and stop suggesting music from genres I despise.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.404
+        },
+        {
+          "outcome": "To have a simple, reliable way to see all new releases from the artists they follow each day.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.384
+        },
+        {
+          "outcome": "For Spotify's autoplay and recommendation features to provide personalized suggestions based on their six years of listening history, rather than generic viral songs.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.359
+        }
+      ]
+    },
+    "q4_repetitive_listening": {
+      "intentional_vs_unintentional": {
+        "intentional": 51,
+        "unintentional": 326
+      },
+      "ranked_repetition_types": [
+        {
+          "type": "not_mentioned",
+          "count": 416,
+          "severity_weight": 1538.2,
+          "desire_to_change_weight": 0
+        },
+        {
+          "type": "algorithm_trapped",
+          "count": 255,
+          "severity_weight": 1499.61,
+          "desire_to_change_weight": 452.09
+        },
+        {
+          "type": "trust_deficit",
+          "count": 34,
+          "severity_weight": 223.93,
+          "desire_to_change_weight": 54.79
+        },
+        {
+          "type": "friction_induced",
+          "count": 37,
+          "severity_weight": 193.21,
+          "desire_to_change_weight": 71.26
+        },
+        {
+          "type": "comfort_ritual",
+          "count": 51,
+          "severity_weight": 172.0,
+          "desire_to_change_weight": 0
+        },
+        {
+          "type": "unclear",
+          "count": 14,
+          "severity_weight": 54.72,
+          "desire_to_change_weight": 14.84
+        }
+      ],
+      "top_quotes": {
+        "not_mentioned": [
+          {
+            "quote": "Spotify Premium member since 2011, planning on leaving for the first time - AI artists in my Discover Weekly",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.9
+          },
+          {
+            "quote": "Today I turned Discover Weekly on and by far 70% of the playlist is AI slop. And you know what? These people that create this music, they don't even try to be original.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.881
+          },
+          {
+            "quote": "I got tired of Spotify's algorithm pushing fake AI artists, so I built a tracker.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.857
+          }
+        ],
+        "algorithm_trapped": [
+          {
+            "quote": "my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.817
+          },
+          {
+            "quote": "they seem to be filled with songs I've heard over and over.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.557
+          },
+          {
+            "quote": "The music recommendations keep showing me the same songs over and over again",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.528
+          }
+        ],
+        "friction_induced": [
+          {
+            "quote": "So this is what I usually do to basically force Spotify into giving me new songs",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.893
+          },
+          {
+            "quote": "Trying to do proper discography runs on Spotify drove me insane, so I built this",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.799
+          },
+          {
+            "quote": "on Spotify I basically only have my old main playlist left... Now whenever I open Spotify I just sit there not knowing what to play anymore",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.684
+          }
+        ],
+        "unclear": [
+          {
+            "quote": "there's three songs I've been playing on repeat for the entire month.",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.307
+          },
+          {
+            "quote": "The playback patterns are extremely abnormal and clearly resemble automated bot behavior — for example: ABABABAB, CDCDCDCD, EFEFEFEF loops.",
+            "source": "spotify_community",
+            "severity": 5,
+            "signal_weight": 1.468
+          },
+          {
+            "quote": "been listening to the same 20-30 songs lately.",
+            "source": "reddit",
+            "severity": 2,
+            "signal_weight": 2.721
+          }
+        ],
+        "comfort_ritual": [
+          {
+            "quote": "what's the point of a playlist I've curated with my own personal taste and favorite songs if you're going to slap my wrists and penetrate me with your terrible recommendations?",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 1.992
+          },
+          {
+            "quote": "Looking for playlists that are consistent and can just play without needing to skip — not too algorithm-heavy.",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.159
+          },
+          {
+            "quote": "Current Echoes (Songs that I am not tired of listening atm)",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 1.796
+          }
+        ],
+        "trust_deficit": [
+          {
+            "quote": "I've had to just completely shut down the smart shuffle feature since the day it was first implemented.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.404
+          },
+          {
+            "quote": "I find myself constantly defaulting to \"liked tracks\" or human-curated playlists.",
+            "source": "reddit",
+            "severity": 5,
+            "signal_weight": 2.359
+          },
+          {
+            "quote": "I have consciously refrained from listening to it because I am afraid of the recs I will get after listening.",
+            "source": "reddit",
+            "severity": 4,
+            "signal_weight": 2.624
+          }
+        ]
+      }
+    },
+    "q5_segment_differences": {
+      "classified_counts": {
+        "unclassified": 448,
+        "regional_language_listener": 9,
+        "active_explorer": 94,
+        "casual_listener": 18,
+        "playlist_heavy_user": 108,
+        "premium_power_user": 78,
+        "mood_based_listener": 16,
+        "comfort_listener": 17,
+        "artist_loyal_user": 19
+      },
+      "classification_rate": 44.5,
+      "intensity_distribution": [
+        {
+          "intensity": "high",
+          "records": 126,
+          "average_severity": 2.9,
+          "signal_weight": 243.62,
+          "churn_risk_rate": 67.5
+        },
+        {
+          "intensity": "medium",
+          "records": 400,
+          "average_severity": 2.66,
+          "signal_weight": 715.98,
+          "churn_risk_rate": 62.5
+        },
+        {
+          "intensity": "low",
+          "records": 281,
+          "average_severity": 2.47,
+          "signal_weight": 451.81,
+          "churn_risk_rate": 56.9
+        }
+      ],
+      "targeting_matrix": [
+        {
+          "segment": "comfort_listener",
+          "intensity": "high",
+          "records": 3,
+          "average_severity": 3,
+          "severity_weight": 13.16,
+          "average_signal_weight": 1.45,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "context_unawareness",
+          "dominant_repetition": "comfort_ritual",
+          "workaround_count": 0,
+          "workaround_rate": 0.0,
+          "addressable_repetition_rate": 0.0,
+          "churn_risk_records": 1,
+          "churn_risk_rate": 33.3
+        },
+        {
+          "segment": "comfort_listener",
+          "intensity": "medium",
+          "records": 8,
+          "average_severity": 1.38,
+          "severity_weight": 21.11,
+          "average_signal_weight": 1.91,
+          "dominant_barrier": "unclear",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 2,
+          "workaround_rate": 25.0,
+          "addressable_repetition_rate": 0.0,
+          "churn_risk_records": 5,
+          "churn_risk_rate": 62.5
+        },
+        {
+          "segment": "comfort_listener",
+          "intensity": "low",
+          "records": 6,
+          "average_severity": 2.17,
+          "severity_weight": 20.37,
+          "average_signal_weight": 1.61,
+          "dominant_barrier": "surface",
+          "dominant_frustration": "taste_model_staleness",
+          "dominant_repetition": "comfort_ritual",
+          "workaround_count": 2,
+          "workaround_rate": 33.3,
+          "addressable_repetition_rate": 16.7,
+          "churn_risk_records": 4,
+          "churn_risk_rate": 66.7
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "intensity": "high",
+          "records": 15,
+          "average_severity": 2.67,
+          "severity_weight": 77.12,
+          "average_signal_weight": 1.89,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "algorithm_trapped",
+          "workaround_count": 6,
+          "workaround_rate": 40.0,
+          "addressable_repetition_rate": 66.7,
+          "churn_risk_records": 8,
+          "churn_risk_rate": 53.3
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "intensity": "medium",
+          "records": 41,
+          "average_severity": 2.71,
+          "severity_weight": 197.44,
+          "average_signal_weight": 1.78,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "algorithm_trapped",
+          "workaround_count": 11,
+          "workaround_rate": 26.8,
+          "addressable_repetition_rate": 56.1,
+          "churn_risk_records": 23,
+          "churn_risk_rate": 56.1
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "intensity": "low",
+          "records": 52,
+          "average_severity": 2.58,
+          "severity_weight": 200.24,
+          "average_signal_weight": 1.51,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 2,
+          "workaround_rate": 3.8,
+          "addressable_repetition_rate": 38.5,
+          "churn_risk_records": 23,
+          "churn_risk_rate": 44.2
+        },
+        {
+          "segment": "active_explorer",
+          "intensity": "high",
+          "records": 12,
+          "average_severity": 3.75,
+          "severity_weight": 97.52,
+          "average_signal_weight": 2.17,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "algorithm_trapped",
+          "workaround_count": 9,
+          "workaround_rate": 75.0,
+          "addressable_repetition_rate": 66.7,
+          "churn_risk_records": 11,
+          "churn_risk_rate": 91.7
+        },
+        {
+          "segment": "active_explorer",
+          "intensity": "medium",
+          "records": 51,
+          "average_severity": 2.45,
+          "severity_weight": 232.7,
+          "average_signal_weight": 1.86,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 28,
+          "workaround_rate": 54.9,
+          "addressable_repetition_rate": 45.1,
+          "churn_risk_records": 37,
+          "churn_risk_rate": 72.5
+        },
+        {
+          "segment": "active_explorer",
+          "intensity": "low",
+          "records": 31,
+          "average_severity": 2.29,
+          "severity_weight": 125.47,
+          "average_signal_weight": 1.75,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 6,
+          "workaround_rate": 19.4,
+          "addressable_repetition_rate": 51.6,
+          "churn_risk_records": 26,
+          "churn_risk_rate": 83.9
+        },
+        {
+          "segment": "mood_based_listener",
+          "intensity": "high",
+          "records": 1,
+          "average_severity": 4,
+          "severity_weight": 5.87,
+          "average_signal_weight": 1.47,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "wrong_context_genre_blending",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 1,
+          "workaround_rate": 100.0,
+          "addressable_repetition_rate": 0.0,
+          "churn_risk_records": 1,
+          "churn_risk_rate": 100.0
+        },
+        {
+          "segment": "mood_based_listener",
+          "intensity": "medium",
+          "records": 9,
+          "average_severity": 1.89,
+          "severity_weight": 28.5,
+          "average_signal_weight": 1.71,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "context_unawareness",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 5,
+          "workaround_rate": 55.6,
+          "addressable_repetition_rate": 22.2,
+          "churn_risk_records": 2,
+          "churn_risk_rate": 22.2
+        },
+        {
+          "segment": "mood_based_listener",
+          "intensity": "low",
+          "records": 6,
+          "average_severity": 1.83,
+          "severity_weight": 19.7,
+          "average_signal_weight": 1.88,
+          "dominant_barrier": "unclear",
+          "dominant_frustration": "autoplay_regression",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 1,
+          "workaround_rate": 16.7,
+          "addressable_repetition_rate": 50.0,
+          "churn_risk_records": 1,
+          "churn_risk_rate": 16.7
+        },
+        {
+          "segment": "regional_language_listener",
+          "intensity": "high",
+          "records": 0,
+          "average_severity": 0.0,
+          "severity_weight": 0,
+          "average_signal_weight": 0.0,
+          "dominant_barrier": "unclear",
+          "dominant_frustration": "unclear",
+          "dominant_repetition": "unclear",
+          "workaround_count": 0,
+          "workaround_rate": 0.0,
+          "addressable_repetition_rate": 0.0,
+          "churn_risk_records": 0,
+          "churn_risk_rate": 0.0
+        },
+        {
+          "segment": "regional_language_listener",
+          "intensity": "medium",
+          "records": 8,
+          "average_severity": 1.88,
+          "severity_weight": 23.63,
+          "average_signal_weight": 1.54,
+          "dominant_barrier": "unclear",
+          "dominant_frustration": "wrong_context_genre_blending",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 4,
+          "workaround_rate": 50.0,
+          "addressable_repetition_rate": 0.0,
+          "churn_risk_records": 3,
+          "churn_risk_rate": 37.5
+        },
+        {
+          "segment": "regional_language_listener",
+          "intensity": "low",
+          "records": 1,
+          "average_severity": 1,
+          "severity_weight": 1.47,
+          "average_signal_weight": 1.47,
+          "dominant_barrier": "surface",
+          "dominant_frustration": "unclear",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 1,
+          "workaround_rate": 100.0,
+          "addressable_repetition_rate": 0.0,
+          "churn_risk_records": 0,
+          "churn_risk_rate": 0.0
+        },
+        {
+          "segment": "artist_loyal_user",
+          "intensity": "high",
+          "records": 2,
+          "average_severity": 4,
+          "severity_weight": 11.74,
+          "average_signal_weight": 1.47,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "taste_model_staleness",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 0,
+          "workaround_rate": 0.0,
+          "addressable_repetition_rate": 0.0,
+          "churn_risk_records": 2,
+          "churn_risk_rate": 100.0
+        },
+        {
+          "segment": "artist_loyal_user",
+          "intensity": "medium",
+          "records": 10,
+          "average_severity": 1.9,
+          "severity_weight": 35.46,
+          "average_signal_weight": 1.86,
+          "dominant_barrier": "surface",
+          "dominant_frustration": "autoplay_regression",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 1,
+          "workaround_rate": 10.0,
+          "addressable_repetition_rate": 10.0,
+          "churn_risk_records": 5,
+          "churn_risk_rate": 50.0
+        },
+        {
+          "segment": "artist_loyal_user",
+          "intensity": "low",
+          "records": 7,
+          "average_severity": 2.71,
+          "severity_weight": 30.56,
+          "average_signal_weight": 1.65,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "autoplay_regression",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 3,
+          "workaround_rate": 42.9,
+          "addressable_repetition_rate": 0.0,
+          "churn_risk_records": 5,
+          "churn_risk_rate": 71.4
+        },
+        {
+          "segment": "casual_listener",
+          "intensity": "high",
+          "records": 0,
+          "average_severity": 0.0,
+          "severity_weight": 0,
+          "average_signal_weight": 0.0,
+          "dominant_barrier": "unclear",
+          "dominant_frustration": "unclear",
+          "dominant_repetition": "unclear",
+          "workaround_count": 0,
+          "workaround_rate": 0.0,
+          "addressable_repetition_rate": 0.0,
+          "churn_risk_records": 0,
+          "churn_risk_rate": 0.0
+        },
+        {
+          "segment": "casual_listener",
+          "intensity": "medium",
+          "records": 6,
+          "average_severity": 1.67,
+          "severity_weight": 16.36,
+          "average_signal_weight": 1.69,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "wrong_context_genre_blending",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 1,
+          "workaround_rate": 16.7,
+          "addressable_repetition_rate": 16.7,
+          "churn_risk_records": 3,
+          "churn_risk_rate": 50.0
+        },
+        {
+          "segment": "casual_listener",
+          "intensity": "low",
+          "records": 12,
+          "average_severity": 1.42,
+          "severity_weight": 26.9,
+          "average_signal_weight": 1.61,
+          "dominant_barrier": "unclear",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 1,
+          "workaround_rate": 8.3,
+          "addressable_repetition_rate": 0.0,
+          "churn_risk_records": 7,
+          "churn_risk_rate": 58.3
+        },
+        {
+          "segment": "premium_power_user",
+          "intensity": "high",
+          "records": 20,
+          "average_severity": 3.15,
+          "severity_weight": 110.41,
+          "average_signal_weight": 1.78,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "recommendation_opacity",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 4,
+          "workaround_rate": 20.0,
+          "addressable_repetition_rate": 20.0,
+          "churn_risk_records": 15,
+          "churn_risk_rate": 75.0
+        },
+        {
+          "segment": "premium_power_user",
+          "intensity": "medium",
+          "records": 42,
+          "average_severity": 3.07,
+          "severity_weight": 207.31,
+          "average_signal_weight": 1.64,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "taste_model_staleness",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 9,
+          "workaround_rate": 21.4,
+          "addressable_repetition_rate": 35.7,
+          "churn_risk_records": 28,
+          "churn_risk_rate": 66.7
+        },
+        {
+          "segment": "premium_power_user",
+          "intensity": "low",
+          "records": 16,
+          "average_severity": 2.5,
+          "severity_weight": 66.81,
+          "average_signal_weight": 1.7,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "taste_model_staleness",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 6,
+          "workaround_rate": 37.5,
+          "addressable_repetition_rate": 31.2,
+          "churn_risk_records": 10,
+          "churn_risk_rate": 62.5
+        },
+        {
+          "segment": "unclassified",
+          "intensity": "high",
+          "records": 73,
+          "average_severity": 2.68,
+          "severity_weight": 385.93,
+          "average_signal_weight": 1.98,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "algorithm_trapped",
+          "workaround_count": 39,
+          "workaround_rate": 53.4,
+          "addressable_repetition_rate": 53.4,
+          "churn_risk_records": 47,
+          "churn_risk_rate": 64.4
+        },
+        {
+          "segment": "unclassified",
+          "intensity": "medium",
+          "records": 225,
+          "average_severity": 2.79,
+          "severity_weight": 1111.15,
+          "average_signal_weight": 1.81,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 96,
+          "workaround_rate": 42.7,
+          "addressable_repetition_rate": 43.1,
+          "churn_risk_records": 144,
+          "churn_risk_rate": 64.0
+        },
+        {
+          "segment": "unclassified",
+          "intensity": "low",
+          "records": 150,
+          "average_severity": 2.59,
+          "severity_weight": 614.71,
+          "average_signal_weight": 1.59,
+          "dominant_barrier": "algorithmic",
+          "dominant_frustration": "filter_bubble_lock_in",
+          "dominant_repetition": "not_mentioned",
+          "workaround_count": 35,
+          "workaround_rate": 23.3,
+          "addressable_repetition_rate": 38.7,
+          "churn_risk_records": 84,
+          "churn_risk_rate": 56.0
+        }
+      ],
+      "segment_frustration_matrix": [
+        {
+          "segment": "comfort_listener",
+          "frustration": "filter_bubble_lock_in",
+          "segment_weight": 14.742,
+          "baseline_weight": 1573.9130000000016,
+          "delta": -1559.1710000000016,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "comfort_listener",
+          "frustration": "taste_model_staleness",
+          "segment_weight": 6.2,
+          "baseline_weight": 497.9959999999997,
+          "delta": -491.7959999999997,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "comfort_listener",
+          "frustration": "wrong_context_genre_blending",
+          "segment_weight": 4.404,
+          "baseline_weight": 554.4819999999996,
+          "delta": -550.0779999999996,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "comfort_listener",
+          "frustration": "autoplay_regression",
+          "segment_weight": 0,
+          "baseline_weight": 273.839,
+          "delta": -273.839,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "comfort_listener",
+          "frustration": "popularity_bias",
+          "segment_weight": 0,
+          "baseline_weight": 361.6959999999999,
+          "delta": -361.6959999999999,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "comfort_listener",
+          "frustration": "context_unawareness",
+          "segment_weight": 16.394,
+          "baseline_weight": 351.498,
+          "delta": -335.104,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "comfort_listener",
+          "frustration": "recommendation_opacity",
+          "segment_weight": 0,
+          "baseline_weight": 488.64900000000006,
+          "delta": -488.64900000000006,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "frustration": "filter_bubble_lock_in",
+          "segment_weight": 265.1819999999999,
+          "baseline_weight": 1573.9130000000016,
+          "delta": -1308.7310000000016,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "frustration": "taste_model_staleness",
+          "segment_weight": 22.604,
+          "baseline_weight": 497.9959999999997,
+          "delta": -475.3919999999997,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "frustration": "wrong_context_genre_blending",
+          "segment_weight": 63.17499999999998,
+          "baseline_weight": 554.4819999999996,
+          "delta": -491.3069999999997,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "frustration": "autoplay_regression",
+          "segment_weight": 68.56,
+          "baseline_weight": 273.839,
+          "delta": -205.279,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "frustration": "popularity_bias",
+          "segment_weight": 5.872,
+          "baseline_weight": 361.6959999999999,
+          "delta": -355.8239999999999,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "frustration": "context_unawareness",
+          "segment_weight": 15.008,
+          "baseline_weight": 351.498,
+          "delta": -336.49,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "frustration": "recommendation_opacity",
+          "segment_weight": 42.856,
+          "baseline_weight": 488.64900000000006,
+          "delta": -445.79300000000006,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "active_explorer",
+          "frustration": "filter_bubble_lock_in",
+          "segment_weight": 298.09800000000007,
+          "baseline_weight": 1573.9130000000016,
+          "delta": -1275.8150000000014,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "active_explorer",
+          "frustration": "taste_model_staleness",
+          "segment_weight": 33.339,
+          "baseline_weight": 497.9959999999997,
+          "delta": -464.6569999999997,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "active_explorer",
+          "frustration": "wrong_context_genre_blending",
+          "segment_weight": 20.754,
+          "baseline_weight": 554.4819999999996,
+          "delta": -533.7279999999996,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "active_explorer",
+          "frustration": "autoplay_regression",
+          "segment_weight": 0,
+          "baseline_weight": 273.839,
+          "delta": -273.839,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "active_explorer",
+          "frustration": "popularity_bias",
+          "segment_weight": 139.506,
+          "baseline_weight": 361.6959999999999,
+          "delta": -222.1899999999999,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "active_explorer",
+          "frustration": "context_unawareness",
+          "segment_weight": 33.803,
+          "baseline_weight": 351.498,
+          "delta": -317.695,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "active_explorer",
+          "frustration": "recommendation_opacity",
+          "segment_weight": 41.208,
+          "baseline_weight": 488.64900000000006,
+          "delta": -447.44100000000003,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "mood_based_listener",
+          "frustration": "filter_bubble_lock_in",
+          "segment_weight": 9.508,
+          "baseline_weight": 1573.9130000000016,
+          "delta": -1564.4050000000016,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "mood_based_listener",
+          "frustration": "taste_model_staleness",
+          "segment_weight": 0,
+          "baseline_weight": 497.9959999999997,
+          "delta": -497.9959999999997,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "mood_based_listener",
+          "frustration": "wrong_context_genre_blending",
+          "segment_weight": 18.026,
+          "baseline_weight": 554.4819999999996,
+          "delta": -536.4559999999997,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "mood_based_listener",
+          "frustration": "autoplay_regression",
+          "segment_weight": 7.75,
+          "baseline_weight": 273.839,
+          "delta": -266.089,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "mood_based_listener",
+          "frustration": "popularity_bias",
+          "segment_weight": 0,
+          "baseline_weight": 361.6959999999999,
+          "delta": -361.6959999999999,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "mood_based_listener",
+          "frustration": "context_unawareness",
+          "segment_weight": 23.052,
+          "baseline_weight": 351.498,
+          "delta": -328.44599999999997,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "mood_based_listener",
+          "frustration": "recommendation_opacity",
+          "segment_weight": 2.826,
+          "baseline_weight": 488.64900000000006,
+          "delta": -485.82300000000004,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "regional_language_listener",
+          "frustration": "filter_bubble_lock_in",
+          "segment_weight": 0,
+          "baseline_weight": 1573.9130000000016,
+          "delta": -1573.9130000000016,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "regional_language_listener",
+          "frustration": "taste_model_staleness",
+          "segment_weight": 0,
+          "baseline_weight": 497.9959999999997,
+          "delta": -497.9959999999997,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "regional_language_listener",
+          "frustration": "wrong_context_genre_blending",
+          "segment_weight": 10.311,
+          "baseline_weight": 554.4819999999996,
+          "delta": -544.1709999999996,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "regional_language_listener",
+          "frustration": "autoplay_regression",
+          "segment_weight": 10.311,
+          "baseline_weight": 273.839,
+          "delta": -263.528,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "regional_language_listener",
+          "frustration": "popularity_bias",
+          "segment_weight": 0,
+          "baseline_weight": 361.6959999999999,
+          "delta": -361.6959999999999,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "regional_language_listener",
+          "frustration": "context_unawareness",
+          "segment_weight": 5.872,
+          "baseline_weight": 351.498,
+          "delta": -345.626,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "regional_language_listener",
+          "frustration": "recommendation_opacity",
+          "segment_weight": 0,
+          "baseline_weight": 488.64900000000006,
+          "delta": -488.64900000000006,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "artist_loyal_user",
+          "frustration": "filter_bubble_lock_in",
+          "segment_weight": 0,
+          "baseline_weight": 1573.9130000000016,
+          "delta": -1573.9130000000016,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "artist_loyal_user",
+          "frustration": "taste_model_staleness",
+          "segment_weight": 11.744,
+          "baseline_weight": 497.9959999999997,
+          "delta": -486.2519999999997,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "artist_loyal_user",
+          "frustration": "wrong_context_genre_blending",
+          "segment_weight": 3.134,
+          "baseline_weight": 554.4819999999996,
+          "delta": -551.3479999999996,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "artist_loyal_user",
+          "frustration": "autoplay_regression",
+          "segment_weight": 20.247,
+          "baseline_weight": 273.839,
+          "delta": -253.59199999999998,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "artist_loyal_user",
+          "frustration": "popularity_bias",
+          "segment_weight": 14.68,
+          "baseline_weight": 361.6959999999999,
+          "delta": -347.0159999999999,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "artist_loyal_user",
+          "frustration": "context_unawareness",
+          "segment_weight": 10.111,
+          "baseline_weight": 351.498,
+          "delta": -341.387,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "artist_loyal_user",
+          "frustration": "recommendation_opacity",
+          "segment_weight": 5.634,
+          "baseline_weight": 488.64900000000006,
+          "delta": -483.01500000000004,
+          "confidence_note": "higher confidence text proxy when explicit language is present"
+        },
+        {
+          "segment": "casual_listener",
+          "frustration": "filter_bubble_lock_in",
+          "segment_weight": 13.950000000000001,
+          "baseline_weight": 1573.9130000000016,
+          "delta": -1559.9630000000016,
+          "confidence_note": "low-effort freshness proxy; validate with behavioral data"
+        },
+        {
+          "segment": "casual_listener",
+          "frustration": "taste_model_staleness",
+          "segment_weight": 4.65,
+          "baseline_weight": 497.9959999999997,
+          "delta": -493.3459999999997,
+          "confidence_note": "low-effort freshness proxy; validate with behavioral data"
+        },
+        {
+          "segment": "casual_listener",
+          "frustration": "wrong_context_genre_blending",
+          "segment_weight": 10.41,
+          "baseline_weight": 554.4819999999996,
+          "delta": -544.0719999999997,
+          "confidence_note": "low-effort freshness proxy; validate with behavioral data"
+        },
+        {
+          "segment": "casual_listener",
+          "frustration": "autoplay_regression",
+          "segment_weight": 0,
+          "baseline_weight": 273.839,
+          "delta": -273.839,
+          "confidence_note": "low-effort freshness proxy; validate with behavioral data"
+        },
+        {
+          "segment": "casual_listener",
+          "frustration": "popularity_bias",
+          "segment_weight": 0,
+          "baseline_weight": 361.6959999999999,
+          "delta": -361.6959999999999,
+          "confidence_note": "low-effort freshness proxy; validate with behavioral data"
+        },
+        {
+          "segment": "casual_listener",
+          "frustration": "context_unawareness",
+          "segment_weight": 3.1,
+          "baseline_weight": 351.498,
+          "delta": -348.39799999999997,
+          "confidence_note": "low-effort freshness proxy; validate with behavioral data"
+        },
+        {
+          "segment": "casual_listener",
+          "frustration": "recommendation_opacity",
+          "segment_weight": 0,
+          "baseline_weight": 488.64900000000006,
+          "delta": -488.64900000000006,
+          "confidence_note": "low-effort freshness proxy; validate with behavioral data"
+        },
+        {
+          "segment": "premium_power_user",
+          "frustration": "filter_bubble_lock_in",
+          "segment_weight": 73.904,
+          "baseline_weight": 1573.9130000000016,
+          "delta": -1500.0090000000016,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "premium_power_user",
+          "frustration": "taste_model_staleness",
+          "segment_weight": 115.86300000000001,
+          "baseline_weight": 497.9959999999997,
+          "delta": -382.1329999999997,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "premium_power_user",
+          "frustration": "wrong_context_genre_blending",
+          "segment_weight": 65.352,
+          "baseline_weight": 554.4819999999996,
+          "delta": -489.12999999999965,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "premium_power_user",
+          "frustration": "autoplay_regression",
+          "segment_weight": 40.364000000000004,
+          "baseline_weight": 273.839,
+          "delta": -233.475,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "premium_power_user",
+          "frustration": "popularity_bias",
+          "segment_weight": 11.908000000000001,
+          "baseline_weight": 361.6959999999999,
+          "delta": -349.7879999999999,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "premium_power_user",
+          "frustration": "context_unawareness",
+          "segment_weight": 42.486000000000004,
+          "baseline_weight": 351.498,
+          "delta": -309.012,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "premium_power_user",
+          "frustration": "recommendation_opacity",
+          "segment_weight": 50.248,
+          "baseline_weight": 488.64900000000006,
+          "delta": -438.40100000000007,
+          "confidence_note": "moderate confidence behavioral proxy; validate with listening history"
+        },
+        {
+          "segment": "unclassified",
+          "frustration": "filter_bubble_lock_in",
+          "segment_weight": 898.529,
+          "baseline_weight": 1573.9130000000016,
+          "delta": -675.3840000000016,
+          "confidence_note": "unclassified or insufficient confidence"
+        },
+        {
+          "segment": "unclassified",
+          "frustration": "taste_model_staleness",
+          "segment_weight": 303.596,
+          "baseline_weight": 497.9959999999997,
+          "delta": -194.3999999999997,
+          "confidence_note": "unclassified or insufficient confidence"
+        },
+        {
+          "segment": "unclassified",
+          "frustration": "wrong_context_genre_blending",
+          "segment_weight": 358.9159999999998,
+          "baseline_weight": 554.4819999999996,
+          "delta": -195.5659999999998,
+          "confidence_note": "unclassified or insufficient confidence"
+        },
+        {
+          "segment": "unclassified",
+          "frustration": "autoplay_regression",
+          "segment_weight": 126.60700000000003,
+          "baseline_weight": 273.839,
+          "delta": -147.23199999999997,
+          "confidence_note": "unclassified or insufficient confidence"
+        },
+        {
+          "segment": "unclassified",
+          "frustration": "popularity_bias",
+          "segment_weight": 189.73000000000002,
+          "baseline_weight": 361.6959999999999,
+          "delta": -171.9659999999999,
+          "confidence_note": "unclassified or insufficient confidence"
+        },
+        {
+          "segment": "unclassified",
+          "frustration": "context_unawareness",
+          "segment_weight": 201.67199999999997,
+          "baseline_weight": 351.498,
+          "delta": -149.82600000000002,
+          "confidence_note": "unclassified or insufficient confidence"
+        },
+        {
+          "segment": "unclassified",
+          "frustration": "recommendation_opacity",
+          "segment_weight": 345.8769999999999,
+          "baseline_weight": 488.64900000000006,
+          "delta": -142.77200000000016,
+          "confidence_note": "unclassified or insufficient confidence"
+        }
+      ],
+      "high_confidence_thresholds": {
+        "top_score_min": 0.7,
+        "gap_min": 0.25
+      }
+    },
+    "q6_unmet_needs": {
+      "workarounds": [
+        {
+          "description": "User manually removes each AI-generated artist from their Discover Weekly playlist using the 'Don't play this artist' feature.",
+          "underlying_need": "Users need an efficient way to remove unwanted categories of music (like AI-generated content) from their recommendations.",
+          "feature_hypothesis": "A global setting or a one-click feedback option in playlists to filter out AI-generated content.",
+          "quote": "I keep on going there, don't-play-these-artist them, but there is just so much of it",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.881,
+          "record_id": "reddit_post:t3_1qtqd7m"
+        },
+        {
+          "description": "Frustrated with AI artists in recommendations, the user built an external website (SlopTracker.org) to track them and teach other users how to block them.",
+          "underlying_need": "Users need transparency about the presence and impact of AI-generated content and effective tools to control its appearance in their listening experience.",
+          "feature_hypothesis": "An in-app feature that identifies AI-generated content and provides clear, powerful controls to exclude it, restoring user trust.",
+          "quote": "I got tired of Spotify's algorithm pushing fake AI artists, so I built a tracker.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.857,
+          "record_id": "reddit_post:t3_1s0ymoo"
+        },
+        {
+          "description": "User posted on Spotify forums to try and get the recommendation algorithm issues addressed, but it was not successful.",
+          "underlying_need": "A way to give feedback or correct the algorithm when it becomes stale.",
+          "feature_hypothesis": "A 'reset taste profile' or 'I need new suggestions' feature.",
+          "quote": "This was obviously never tackled or improved despite my posts on Spotify forums",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.817,
+          "record_id": "reddit_post:t3_1rp2wgo"
+        },
+        {
+          "description": "User is actively seeking alternative streaming services or methods to find non-personalized, curated playlists for discovery.",
+          "underlying_need": "Users want to break out of their preference bubble and discover new music within a genre or era, which requires access to non-personalized content.",
+          "feature_hypothesis": "A setting or mode to switch between personalized and editorially curated (non-personalized) versions of playlists.",
+          "quote": "How do you find playlists that don't keep you in a bubble of your own preferences on Spotify?",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.557,
+          "record_id": "reddit_post:t3_1mij33x"
+        },
+        {
+          "description": "User blocks songs they dislike in an attempt to improve recommendations, but finds it ineffective.",
+          "underlying_need": "To provide effective negative feedback to the recommendation system.",
+          "feature_hypothesis": "More impactful feedback mechanisms than 'block' or 'dislike'.",
+          "quote": "I've blocked all the music I don't like, but it still keeps showing up elsewhere.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.528,
+          "record_id": "reddit_post:t3_1to5rk0"
+        },
+        {
+          "description": "User has tried all of Spotify's main discovery features (AI DJ, Radio, Daily Mix) and found them all to be repetitive.",
+          "underlying_need": "To have control over the amount of new vs. familiar music in recommendations.",
+          "feature_hypothesis": "A user-facing control, like a slider, to adjust the 'discovery tolerance' or freshness of recommendations.",
+          "quote": "I can’t believe they haven’t implemented a “discovery tolerance” dial",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.497,
+          "record_id": "reddit_post:t3_1qxgrgn"
+        },
+        {
+          "description": "User repeatedly uses the 'do not play' button and blocks artists to stop recommendations for a genre they hate, but these actions are ineffective. They have also disabled the smart shuffle feature entirely.",
+          "underlying_need": "Users need to be able to reliably and permanently correct Spotify's understanding of their taste, especially for strong negative preferences.",
+          "feature_hypothesis": "A 'hard block' or 'never recommend this genre/artist' feature that provides clear and lasting feedback to the recommendation algorithm.",
+          "quote": "I immediately press the \"do not play\" button and block that artist. And yet consistently, constantly, Spotify keeps subjecting me to that abhorrent filth.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.404,
+          "record_id": "reddit_post:t3_1neseph"
+        },
+        {
+          "description": "User avoids algorithmic recommendations like autoplay and instead plays from their own 'liked tracks' or human-curated playlists.",
+          "underlying_need": "Recommendations should be personalized and relevant to listening history, not just trending tracks.",
+          "feature_hypothesis": "A way to tune recommendations to be less influenced by global trends and more by personal taste.",
+          "quote": "I find myself constantly defaulting to “liked tracks” or human-curated playlists.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.359,
+          "record_id": "reddit_post:t3_1tgsmq5"
+        },
+        {
+          "description": "User employs a complex, manual process of creating a base playlist, seeding a second playlist with song radios from the first, and then meticulously filtering out all known songs and artists to find new music.",
+          "underlying_need": "Users need a way to discover music that is stylistically similar to their tastes but from entirely new artists and tracks, avoiding any repetition of what they already know.",
+          "feature_hypothesis": "A 'deep discovery' or 'explore' mode for playlists that generates recommendations strictly outside the user's known library and listening history.",
+          "quote": "here comes the tedious part... go through the playlist and delete any songs and artists you already know.",
+          "source": "reddit",
+          "severity": 4,
+          "signal_weight": 2.893,
+          "record_id": "reddit_post:t3_1qbcg5k"
+        },
+        {
+          "description": "User has to manually block multiple new AI artists from their Discover Weekly every week to try and keep the playlist usable.",
+          "underlying_need": "Users need a way to opt-out of or filter entire categories of content, like AI-generated music, from their recommendations.",
+          "feature_hypothesis": "A user setting to exclude AI-generated content from all algorithmic recommendations.",
+          "quote": "manually blocking every artist profile that you dislike",
+          "source": "reddit",
+          "severity": 4,
+          "signal_weight": 2.876,
+          "record_id": "reddit_post:t3_1md8bxx"
+        }
+      ],
+      "competitive_displacements": [
+        {
+          "platform_or_method": "other",
+          "need_served": "A service that does not push AI-generated music into core discovery features.",
+          "migration_status": "full_migration",
+          "quote": "planning on leaving for the first time",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.9,
+          "record_id": "reddit_post:t3_1m6cke2"
+        },
+        {
+          "platform_or_method": "other",
+          "need_served": "A discovery experience free from AI-generated music.",
+          "migration_status": "full_migration",
+          "quote": "I think I'm going to go someplace else.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.881,
+          "record_id": "reddit_post:t3_1qtqd7m"
+        },
+        {
+          "platform_or_method": "other",
+          "need_served": "Better, fresher music suggestions.",
+          "migration_status": "full_migration",
+          "quote": "So far I’m having a good experience on Deezer and I’m not missing Spotify at all... the suggestions are really better",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.817,
+          "record_id": "reddit_post:t3_1rp2wgo"
+        },
+        {
+          "platform_or_method": "other",
+          "need_served": "Access to curated, non-personalized playlists for genuine discovery within a genre or era.",
+          "migration_status": "unclear",
+          "quote": "Is there another streaming service that does this better than Spotify currently?",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.557,
+          "record_id": "reddit_post:t3_1mij33x"
+        },
+        {
+          "platform_or_method": "other",
+          "need_served": "Effective daily music recommendations that understand nuanced sub-genres.",
+          "migration_status": "partial_migration",
+          "quote": "I tried some Chinese music streaming apps... I only used them for a day and found over 10 new songs I liked!",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.528,
+          "record_id": "reddit_post:t3_1to5rk0"
+        },
+        {
+          "platform_or_method": "Apple Music",
+          "need_served": "Better recommendations for new music.",
+          "migration_status": "full_migration",
+          "quote": "My wife says Apple Music is amazing for new recommendations so I’m tempted to move over",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.497,
+          "record_id": "reddit_post:t3_1qxgrgn"
+        },
+        {
+          "platform_or_method": "YouTube",
+          "need_served": "An alternative music service with the hope of a better algorithm that can be trained correctly.",
+          "migration_status": "full_migration",
+          "quote": "since youtube music works on revanced again I shall be switching over.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.404,
+          "record_id": "reddit_post:t3_1neseph"
+        },
+        {
+          "platform_or_method": "YouTube Music",
+          "need_served": "A better, more personalized recommendation experience.",
+          "migration_status": "full_migration",
+          "quote": "I'm thinking of going back because I remember it being a way better experience.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.359,
+          "record_id": "reddit_post:t3_1tgsmq5"
+        },
+        {
+          "platform_or_method": "Apple Music",
+          "need_served": "Better shuffle variety on large playlists.",
+          "migration_status": "partial_migration",
+          "quote": "I switched to Apple music at the end of last year and while I've been loving the shuffle",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.327,
+          "record_id": "reddit_post:t3_1tdnt3m"
+        },
+        {
+          "platform_or_method": "Tidal",
+          "need_served": "An alternative to Spotify's algorithm which the user feels is pushing unwanted content.",
+          "migration_status": "full_migration",
+          "quote": "Who is using Tidal? Please suggest alternatives.",
+          "source": "reddit",
+          "severity": 4,
+          "signal_weight": 2.9,
+          "record_id": "reddit_post:t3_1sq5c02"
+        }
+      ],
+      "resignation_signals": [
+        {
+          "accepted_limitation": "AI music is now part of the core discovery experience, even for premium users.",
+          "need_statement": "Users need to trust that their primary discovery playlists will contain authentic, human-made music.",
+          "quote": "for it to now be forced upon me is insane when I'm already paying a premium",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.9,
+          "record_id": "reddit_post:t3_1m6cke2"
+        },
+        {
+          "accepted_limitation": "Spotify is not adequately addressing the influx of AI-generated artists, forcing users to create their own external solutions.",
+          "need_statement": "Users need the platform to take responsibility for content quality and authenticity.",
+          "quote": "I feel like most listeners have absolutely no idea how massive of a financial impact this is already having.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.857,
+          "record_id": "reddit_post:t3_1s0ymoo"
+        },
+        {
+          "accepted_limitation": "Spotify's 'Made for You' playlists are overly conformed to existing preferences, making true discovery difficult.",
+          "need_statement": "Users need a way to access non-personalized, editorially curated playlists to explore genres without the algorithm narrowing the selection.",
+          "quote": "I want a curated playlist -- not something that's already conforming to my preferences.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.557,
+          "record_id": "reddit_post:t3_1mij33x"
+        },
+        {
+          "accepted_limitation": "The user feels Spotify's recommendations are repetitive and lack the nuance to distinguish between sub-genres.",
+          "need_statement": "A need for recommendations that understand and respect sub-genre distinctions.",
+          "quote": "Spotify doesn't focus on the melody itself, only on the genre.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.528,
+          "record_id": "reddit_post:t3_1to5rk0"
+        },
+        {
+          "accepted_limitation": "The user has concluded that all of Spotify's automated discovery features are fundamentally repetitive and a 'waste of time'.",
+          "need_statement": "A need for more variety and user control in music discovery.",
+          "quote": "AI DJ: unbearable, will feed me my 5-10 most played songs.",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.497,
+          "record_id": "reddit_post:t3_1qxgrgn"
+        },
+        {
+          "accepted_limitation": "Spotify removed the dedicated feature for finding new releases from followed artists, making discovery harder.",
+          "need_statement": "Users need a reliable and easily accessible way to track new releases from artists they follow.",
+          "quote": "suddenly that option vanished. Where can I see it?",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.384,
+          "record_id": "reddit_post:t3_1reupnf"
+        },
+        {
+          "accepted_limitation": "The recommendation queue has become unusable because it always defaults to viral TikTok songs.",
+          "need_statement": "Users need to trust that recommendations reflect their long-term listening history.",
+          "quote": "The \"recommended for you\" queue has honestly become unusable for me",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.359,
+          "record_id": "reddit_post:t3_1tgsmq5"
+        },
+        {
+          "accepted_limitation": "Spotify's recommendation system is surfacing low-quality, AI-generated music that impersonates real artists.",
+          "need_statement": "Users need to trust that recommended music is authentic and not AI-generated impersonations.",
+          "quote": "Spotify is recommending me AI albums impersonating an inactive artist",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.328,
+          "record_id": "reddit_post:t3_1tyrxlv"
+        },
+        {
+          "accepted_limitation": "Spotify's shuffle feature repeatedly plays a small subset of songs from a very large playlist.",
+          "need_statement": "Users need a shuffle that provides variety across their entire library.",
+          "quote": "it just kept repeating the same ~300 songs on shuffle and never played the others",
+          "source": "reddit",
+          "severity": 5,
+          "signal_weight": 2.327,
+          "record_id": "reddit_post:t3_1tdnt3m"
+        },
+        {
+          "accepted_limitation": "Spotify's algorithm is now optimized for goals other than the user's listening preferences, such as pushing non-music content.",
+          "need_statement": "Users need to trust that the recommendation algorithm is serving their interests and not external ones.",
+          "quote": "now brainfry comes to Spotify as well",
+          "source": "reddit",
+          "severity": 4,
+          "signal_weight": 2.9,
+          "record_id": "reddit_post:t3_1sq5c02"
+        }
+      ],
+      "recurring_need_phrases": [
+        {
+          "need": "trust_recovery",
+          "weighted_mentions": 11.01
+        },
+        {
+          "need": "to discover and share niche, underground, or pre-trend music that is not surfaced by standard recommendations.",
+          "weighted_mentions": 10.28
+        },
+        {
+          "need": "finding and sharing fresh, niche, and up-and-coming artists.",
+          "weighted_mentions": 10.28
+        },
+        {
+          "need": "deeper_discovery",
+          "weighted_mentions": 5.46
+        },
+        {
+          "need": "initially provided more open and interesting recommendations before also becoming repetitive.",
+          "weighted_mentions": 4.89
+        },
+        {
+          "need": "the recommendation system should help users break out of listening ruts by providing more varied and surprising suggestions.",
+          "weighted_mentions": 4.89
+        },
+        {
+          "need": "users need playback algorithms that surface the full breadth of their large playlists.",
+          "weighted_mentions": 4.24
+        },
+        {
+          "need": "users need discovery features to provide better variety and more relevant new music.",
+          "weighted_mentions": 4.02
+        },
+        {
+          "need": "low_effort_exploration",
+          "weighted_mentions": 3.68
+        },
+        {
+          "need": "discovery_transparency",
+          "weighted_mentions": 3.62
+        },
+        {
+          "need": "users want to listen to their own curated playlists without forced additions.",
+          "weighted_mentions": 3.19
+        },
+        {
+          "need": "recommendations should respect genre boundaries and cultural/language context.",
+          "weighted_mentions": 3.1
+        },
+        {
+          "need": "playlists should be automatically maintained or updated when song versions change in the catalog.",
+          "weighted_mentions": 3.1
+        },
+        {
+          "need": "users need control over the content recommended on their home page.",
+          "weighted_mentions": 3.1
+        },
+        {
+          "need": "users need more variety in song and playlist recommendations.",
+          "weighted_mentions": 3.1
+        }
+      ],
+      "cross_path_evidence": [
+        {
+          "theme": "discovery_memory_and_evaluation_layer",
+          "workaround_mentions": 179,
+          "competitive_mentions": 120,
+          "resignation_mentions": 20
+        },
+        {
+          "theme": "context_aware_profile_separation",
+          "workaround_mentions": 171,
+          "competitive_mentions": 96,
+          "resignation_mentions": 121
+        },
+        {
+          "theme": "trusted_peer_discovery",
+          "workaround_mentions": 140,
+          "competitive_mentions": 120,
+          "resignation_mentions": 52
+        }
+      ]
+    },
+    "product_lens": {
+      "controlled_freshness": {
+        "records": 807,
+        "controlled_freshness_records": 733,
+        "controlled_freshness_rate": 90.8,
+        "safe_novelty_records": 337,
+        "unwanted_repetition_records": 363,
+        "unwanted_repetition_rate": 45.0,
+        "trust_gap_records": 131,
+        "trust_gap_rate": 16.2
+      },
+      "why_users_repeat_music": [
+        {
+          "driver": "algorithmic_reinforcement",
+          "records": 263,
+          "percentage": 36.9,
+          "severity_weight": 1545.54,
+          "top_quotes": [
+            {
+              "quote": "for years I tried to understand why my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.817
+            },
+            {
+              "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.557
+            }
+          ]
+        },
+        {
+          "driver": "playlist_dependency",
+          "records": 182,
+          "percentage": 25.5,
+          "severity_weight": 964.31,
+          "top_quotes": [
+            {
+              "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.557
+            },
+            {
+              "quote": "it feels like Spotify only wants to push whatever song is currently blowing up on TikTok/Instagram. Whenever I'm on auto play, it doesn't matter what genre of music I start with somehow my recommendation queue always circles back to viral TikTok tracks.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.359
+            }
+          ]
+        },
+        {
+          "driver": "weak_exploration_controls",
+          "records": 113,
+          "percentage": 15.8,
+          "severity_weight": 658.95,
+          "top_quotes": [
+            {
+              "quote": "for years I tried to understand why my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.817
+            },
+            {
+              "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.557
+            }
+          ]
+        },
+        {
+          "driver": "low_discovery_confidence",
+          "records": 61,
+          "percentage": 8.6,
+          "severity_weight": 403.96,
+          "top_quotes": [
+            {
+              "quote": "The music recommendations keep showing me the same songs over and over again, and all of them are ones I don't enjoy. I haven't found any new songs I like for two months now. I desperately need a solution, or a new music streaming app",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.528
+            },
+            {
+              "quote": "Spotify keeps recommending me music I hate.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.404
+            }
+          ]
+        },
+        {
+          "driver": "habit_loop",
+          "records": 72,
+          "percentage": 10.1,
+          "severity_weight": 297.8,
+          "top_quotes": [
+            {
+              "quote": "it feels like Spotify only wants to push whatever song is currently blowing up on TikTok/Instagram. Whenever I'm on auto play, it doesn't matter what genre of music I start with somehow my recommendation queue always circles back to viral TikTok tracks.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.359
+            },
+            {
+              "quote": "Now whenever I open Spotify I just sit there not knowing what to play anymore someone please help me fix my spotify life",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.684
+            }
+          ]
+        },
+        {
+          "driver": "mood_safety",
+          "records": 17,
+          "percentage": 2.4,
+          "severity_weight": 58.04,
+          "top_quotes": [
+            {
+              "quote": "Looking for playlists that are consistent and can just play without needing to skip — not too algorithm-heavy. Also open to how people organize their library to avoid constant recommendations.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.159
+            },
+            {
+              "quote": "Spotify would avoid inserting them into: - Daily mixes - Autoplay - Recommended tracks - Mood playlists - Casual shuffle sessions",
+              "source": "spotify_community",
+              "severity": 4,
+              "signal_weight": 1.55
+            }
+          ]
+        },
+        {
+          "driver": "poor_first_song_risk",
+          "records": 4,
+          "percentage": 0.6,
+          "severity_weight": 33.61,
+          "top_quotes": [
+            {
+              "quote": "Spotify keeps recommending me music I hate.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.404
+            },
+            {
+              "quote": "I listened to hours of a daily mix playlist, all the unknown tracks were out of my taste, total garbage. Those songs may be famous,s but to a different audience. ... You will gonna lose your 5 years subscriber if things don't improve.",
+              "source": "spotify_community",
+              "severity": 5,
+              "signal_weight": 1.55
+            }
+          ]
+        },
+        {
+          "driver": "time_pressure",
+          "records": 1,
+          "percentage": 0.1,
+          "severity_weight": 3.1,
+          "top_quotes": [
+            {
+              "quote": "But in that moment I can never find the song that matches exactly how I feel.",
+              "source": "spotify_community",
+              "severity": 2,
+              "signal_weight": 1.55
+            }
+          ]
+        }
+      ],
+      "why_discovery_fails": [
+        {
+          "failure_mode": "same_songs_repeating",
+          "records": 155,
+          "percentage": 23.0,
+          "severity_weight": 879.83,
+          "top_quotes": [
+            {
+              "quote": "The music recommendations keep showing me the same songs over and over again, and all of them are ones I don't enjoy. I haven't found any new songs I like for two months now. I desperately need a solution, or a new music streaming app",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.528
+            },
+            {
+              "quote": "the algorithm just gives you the same stuff over and over, but I’m wondering if anyone has found a way around it. My wife says Apple Music is amazing for new recommendations so I’m tempted to move over",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.497
+            }
+          ]
+        },
+        {
+          "failure_mode": "taste_profile_outdated",
+          "records": 92,
+          "percentage": 13.6,
+          "severity_weight": 575.18,
+          "top_quotes": [
+            {
+              "quote": "for years I tried to understand why my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.817
+            },
+            {
+              "quote": "The music recommendations keep showing me the same songs over and over again, and all of them are ones I don't enjoy. I haven't found any new songs I like for two months now. I desperately need a solution, or a new music streaming app",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.528
+            }
+          ]
+        },
+        {
+          "failure_mode": "shuffle_non_random",
+          "records": 105,
+          "percentage": 15.6,
+          "severity_weight": 542.62,
+          "top_quotes": [
+            {
+              "quote": "I became more and more annoyed at the shuffle, I have one big playlist with more than 8000 songs in it... but I've noticed that it just kept repeating the same ~300 songs on shuffle and never played the others",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.327
+            },
+            {
+              "quote": "I originally built a tool I call FairShuffle, a smarter Spotify shuffler that evenly spaces out artists in your playlists so you don’t get multiple songs from the same band in a row.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.609
+            }
+          ]
+        },
+        {
+          "failure_mode": "playlist_predictability",
+          "records": 78,
+          "percentage": 11.6,
+          "severity_weight": 473.64,
+          "top_quotes": [
+            {
+              "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.557
+            },
+            {
+              "quote": "the algorithm just gives you the same stuff over and over, but I’m wondering if anyone has found a way around it. My wife says Apple Music is amazing for new recommendations so I’m tempted to move over",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.497
+            }
+          ]
+        },
+        {
+          "failure_mode": "discover_weekly_stale",
+          "records": 55,
+          "percentage": 8.1,
+          "severity_weight": 411.42,
+          "top_quotes": [
+            {
+              "quote": "Spotify Premium member since 2011, planning on leaving for the first time - AI artists in my Discover Weekly",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.9
+            },
+            {
+              "quote": "Today I turned Discover Weekly on and by far 70% of the playlist is AI slop. And you know what? These people that create this music, they don't even try to be original.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.881
+            }
+          ]
+        },
+        {
+          "failure_mode": "known_artists_dominating",
+          "records": 54,
+          "percentage": 8.0,
+          "severity_weight": 360.88,
+          "top_quotes": [
+            {
+              "quote": "for years I tried to understand why my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.817
+            },
+            {
+              "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.557
+            }
+          ]
+        },
+        {
+          "failure_mode": "mood_mismatch",
+          "records": 54,
+          "percentage": 8.0,
+          "severity_weight": 265.63,
+          "top_quotes": [
+            {
+              "quote": "Excluding it from my taste preferences doesn't work to stop the jarring Sesame Street injections between my genre songs when I listen personally.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 1.836
+            },
+            {
+              "quote": "Most algorithms don't do that and optimize for engagement, not for what actually resonates with you right now.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.204
+            }
+          ]
+        },
+        {
+          "failure_mode": "too_mainstream",
+          "records": 37,
+          "percentage": 5.5,
+          "severity_weight": 222.32,
+          "top_quotes": [
+            {
+              "quote": "it feels like Spotify only wants to push whatever song is currently blowing up on TikTok/Instagram. Whenever I'm on auto play, it doesn't matter what genre of music I start with somehow my recommendation queue always circles back to viral TikTok tracks.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.359
+            },
+            {
+              "quote": "“Fans also like” often feels extremely surface-level and popularity-driven rather than musically relevant",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.799
+            }
+          ]
+        },
+        {
+          "failure_mode": "radio_too_narrow",
+          "records": 23,
+          "percentage": 3.4,
+          "severity_weight": 128.12,
+          "top_quotes": [
+            {
+              "quote": "the algorithm just gives you the same stuff over and over, but I’m wondering if anyone has found a way around it. My wife says Apple Music is amazing for new recommendations so I’m tempted to move over",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.497
+            },
+            {
+              "quote": "So this is what I usually do to basically force Spotify into giving me new songs:",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.893
+            }
+          ]
+        },
+        {
+          "failure_mode": "regional_mismatch",
+          "records": 22,
+          "percentage": 3.3,
+          "severity_weight": 98.05,
+          "top_quotes": [
+            {
+              "quote": "every week I'm getting a mix of the kind of stuff I'd usually get recommended, plus a whole bunch of stuff in genre's I don't listen to, from Artists I don't listen to or follow. Music in languages I don't speak.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.339
+            },
+            {
+              "quote": "I actively reject and dislike MULTIPLE podcasts EVERY WEEK so that they supposedly won’t be shown to me anymore, and yet absolutely nothing changes.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 1.952
+            }
+          ]
+        }
+      ],
+      "what_users_are_trying_to_achieve": [
+        {
+          "goal": "taste_expansion",
+          "records": 297,
+          "percentage": 18.1,
+          "severity_weight": 1539.21,
+          "top_quotes": [
+            {
+              "quote": "Spotify Premium member since 2011, planning on leaving for the first time - AI artists in my Discover Weekly",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.9
+            },
+            {
+              "quote": "Today I turned Discover Weekly on and by far 70% of the playlist is AI slop. And you know what? These people that create this music, they don't even try to be original.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.881
+            }
+          ]
+        },
+        {
+          "goal": "escape_repetitive_playlists",
+          "records": 229,
+          "percentage": 13.9,
+          "severity_weight": 1340.18,
+          "top_quotes": [
+            {
+              "quote": "for years I tried to understand why my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.817
+            },
+            {
+              "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.557
+            }
+          ]
+        },
+        {
+          "goal": "passive_freshness",
+          "records": 189,
+          "percentage": 11.5,
+          "severity_weight": 1022.22,
+          "top_quotes": [
+            {
+              "quote": "Spotify Premium member since 2011, planning on leaving for the first time - AI artists in my Discover Weekly",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.9
+            },
+            {
+              "quote": "Today I turned Discover Weekly on and by far 70% of the playlist is AI slop. And you know what? These people that create this music, they don't even try to be original.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.881
+            }
+          ]
+        },
+        {
+          "goal": "comfort_listening",
+          "records": 212,
+          "percentage": 12.9,
+          "severity_weight": 859.87,
+          "top_quotes": [
+            {
+              "quote": "I became more and more annoyed at the shuffle, I have one big playlist with more than 8000 songs in it... but I've noticed that it just kept repeating the same ~300 songs on shuffle and never played the others",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.327
+            },
+            {
+              "quote": "I have discovered that it has fixed spotify's shuffle issues where you get the same songs played over and over.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.537
+            }
+          ]
+        },
+        {
+          "goal": "deep_exploration",
+          "records": 130,
+          "percentage": 7.9,
+          "severity_weight": 590.34,
+          "top_quotes": [
+            {
+              "quote": "I got tired of Spotify's algorithm pushing fake AI artists, so I built a tracker.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.857
+            },
+            {
+              "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.557
+            }
+          ]
+        },
+        {
+          "goal": "identity_building",
+          "records": 103,
+          "percentage": 6.3,
+          "severity_weight": 435.94,
+          "top_quotes": [
+            {
+              "quote": "I got tired of Spotify's algorithm pushing fake AI artists, so I built a tracker.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.857
+            },
+            {
+              "quote": "Literally 50% of recommended songs are Ai.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.817
+            }
+          ]
+        },
+        {
+          "goal": "fresh_music_without_effort",
+          "records": 67,
+          "percentage": 4.1,
+          "severity_weight": 347.66,
+          "top_quotes": [
+            {
+              "quote": "Today I turned Discover Weekly on and by far 70% of the playlist is AI slop. And you know what? These people that create this music, they don't even try to be original.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.881
+            },
+            {
+              "quote": "for years I tried to understand why my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.817
+            }
+          ]
+        },
+        {
+          "goal": "similar_but_not_same",
+          "records": 64,
+          "percentage": 3.9,
+          "severity_weight": 329.15,
+          "top_quotes": [
+            {
+              "quote": "The music recommendations keep showing me the same songs over and over again, and all of them are ones I don't enjoy. I haven't found any new songs I like for two months now. I desperately need a solution, or a new music streaming app",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.528
+            },
+            {
+              "quote": "it feels like Spotify only wants to push whatever song is currently blowing up on TikTok/Instagram. Whenever I'm on auto play, it doesn't matter what genre of music I start with somehow my recommendation queue always circles back to viral TikTok tracks.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.359
+            }
+          ]
+        },
+        {
+          "goal": "build_music_identity",
+          "records": 75,
+          "percentage": 4.6,
+          "severity_weight": 295.67,
+          "top_quotes": [
+            {
+              "quote": "it kind of hit me how easy it is to let algorithms quietly narrow your taste.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.728
+            },
+            {
+              "quote": "Now whenever I open Spotify I just sit there not knowing what to play anymore someone please help me fix my spotify life",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.684
+            }
+          ]
+        },
+        {
+          "goal": "mood_based_listening",
+          "records": 68,
+          "percentage": 4.1,
+          "severity_weight": 281.01,
+          "top_quotes": [
+            {
+              "quote": "Now whenever I open Spotify I just sit there not knowing what to play anymore someone please help me fix my spotify life",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.684
+            },
+            {
+              "quote": "Now Spotify just recommends the same songs in my other playlists regardless of if they're even the same genre as the playlist I'm trying to build.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.637
+            }
+          ]
+        },
+        {
+          "goal": "social_discovery",
+          "records": 73,
+          "percentage": 4.4,
+          "severity_weight": 254.67,
+          "top_quotes": [
+            {
+              "quote": "I became more and more annoyed at the shuffle, I have one big playlist with more than 8000 songs in it... but I've noticed that it just kept repeating the same ~300 songs on shuffle and never played the others",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.327
+            },
+            {
+              "quote": "I get bored to hear my own music/algorithm from time to time, so I just look down basic Playlist names... that way I can avoid the algorithm a little bit",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.241
+            }
+          ]
+        },
+        {
+          "goal": "activity_based_listening",
+          "records": 61,
+          "percentage": 3.7,
+          "severity_weight": 237.04,
+          "top_quotes": [
+            {
+              "quote": "I'm reorganizing my Spotify playlists using my most in depth organizational scheme yet.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.339
+            },
+            {
+              "quote": "I got tired of the same overplayed tracks from the radio and Spotify algorithms, so I made my own “radio.”",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.253
+            }
+          ]
+        },
+        {
+          "goal": "safe_adjacent_genre_exploration",
+          "records": 43,
+          "percentage": 2.6,
+          "severity_weight": 220.93,
+          "top_quotes": [
+            {
+              "quote": "“Fans also like” often feels extremely surface-level and popularity-driven rather than musically relevant",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.799
+            },
+            {
+              "quote": "my decade mixes on Spotify the last few days have been fucking god awful. Today, my 90s playlist is full of actual salsa music",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.064
+            }
+          ]
+        },
+        {
+          "goal": "match_current_mood",
+          "records": 33,
+          "percentage": 2.0,
+          "severity_weight": 147.84,
+          "top_quotes": [
+            {
+              "quote": "my decade mixes on Spotify the last few days have been fucking god awful. Today, my 90s playlist is full of actual salsa music",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.064
+            },
+            {
+              "quote": "Excluding it from my taste preferences doesn't work to stop the jarring Sesame Street injections between my genre songs when I listen personally.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 1.836
+            }
+          ]
+        }
+      ],
+      "unmet_needs": [
+        {
+          "need": "trust_recovery",
+          "records": 254,
+          "percentage": 22.4,
+          "severity_weight": 1461.73,
+          "top_quotes": [
+            {
+              "quote": "Spotify Premium member since 2011, planning on leaving for the first time - AI artists in my Discover Weekly",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.9
+            },
+            {
+              "quote": "Today I turned Discover Weekly on and by far 70% of the playlist is AI slop. And you know what? These people that create this music, they don't even try to be original.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.881
+            }
+          ]
+        },
+        {
+          "need": "better_variety",
+          "records": 202,
+          "percentage": 17.8,
+          "severity_weight": 1124.74,
+          "top_quotes": [
+            {
+              "quote": "for years I tried to understand why my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.817
+            },
+            {
+              "quote": "The music recommendations keep showing me the same songs over and over again, and all of them are ones I don't enjoy. I haven't found any new songs I like for two months now. I desperately need a solution, or a new music streaming app",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.528
+            }
+          ]
+        },
+        {
+          "need": "freshness_control",
+          "records": 140,
+          "percentage": 12.3,
+          "severity_weight": 699.16,
+          "top_quotes": [
+            {
+              "quote": "for years I tried to understand why my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.817
+            },
+            {
+              "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.557
+            }
+          ]
+        },
+        {
+          "need": "familiarity_balance",
+          "records": 114,
+          "percentage": 10.1,
+          "severity_weight": 645.29,
+          "top_quotes": [
+            {
+              "quote": "Spotify Premium member since 2011, planning on leaving for the first time - AI artists in my Discover Weekly",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.9
+            },
+            {
+              "quote": "Today I turned Discover Weekly on and by far 70% of the playlist is AI slop. And you know what? These people that create this music, they don't even try to be original.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.881
+            }
+          ]
+        },
+        {
+          "need": "deeper_discovery",
+          "records": 118,
+          "percentage": 10.4,
+          "severity_weight": 540.7,
+          "top_quotes": [
+            {
+              "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.557
+            },
+            {
+              "quote": "The music recommendations keep showing me the same songs over and over again, and all of them are ones I don't enjoy. I haven't found any new songs I like for two months now. I desperately need a solution, or a new music streaming app",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.528
+            }
+          ]
+        },
+        {
+          "need": "discovery_transparency",
+          "records": 79,
+          "percentage": 7.0,
+          "severity_weight": 392.5,
+          "top_quotes": [
+            {
+              "quote": "I got tired of Spotify's algorithm pushing fake AI artists, so I built a tracker.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.857
+            },
+            {
+              "quote": "Literally 50% of recommended songs are Ai.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.817
+            }
+          ]
+        },
+        {
+          "need": "low_effort_exploration",
+          "records": 76,
+          "percentage": 6.7,
+          "severity_weight": 327.95,
+          "top_quotes": [
+            {
+              "quote": "I think is time to stop paying Spotify.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 2.384
+            },
+            {
+              "quote": "So this is what I usually do to basically force Spotify into giving me new songs:",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.893
+            }
+          ]
+        },
+        {
+          "need": "mood_awareness",
+          "records": 63,
+          "percentage": 5.6,
+          "severity_weight": 279.17,
+          "top_quotes": [
+            {
+              "quote": "Now whenever I open Spotify I just sit there not knowing what to play anymore someone please help me fix my spotify life",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.684
+            },
+            {
+              "quote": "Excluding it from my taste preferences doesn't work to stop the jarring Sesame Street injections between my genre songs when I listen personally.",
+              "source": "reddit",
+              "severity": 5,
+              "signal_weight": 1.836
+            }
+          ]
+        },
+        {
+          "need": "playlist_evolution",
+          "records": 57,
+          "percentage": 5.0,
+          "severity_weight": 256.99,
+          "top_quotes": [
+            {
+              "quote": "Now whenever I open Spotify I just sit there not knowing what to play anymore someone please help me fix my spotify life",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.684
+            },
+            {
+              "quote": "Now Spotify just recommends the same songs in my other playlists regardless of if they're even the same genre as the playlist I'm trying to build.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.637
+            }
+          ]
+        },
+        {
+          "need": "language_culture_relevance",
+          "records": 31,
+          "percentage": 2.7,
+          "severity_weight": 127.89,
+          "top_quotes": [
+            {
+              "quote": "every week I'm getting a mix of the kind of stuff I'd usually get recommended, plus a whole bunch of stuff in genre's I don't listen to, from Artists I don't listen to or follow. Music in languages I don't speak.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.339
+            },
+            {
+              "quote": "Tired of spoon-fed recommendations? I built Unheard.FM — fresh, transparent music discovery you control.",
+              "source": "reddit",
+              "severity": 4,
+              "signal_weight": 2.205
+            }
+          ]
+        }
+      ],
+      "opportunity_areas": [
+        {
+          "opportunity": "recommendation_repair",
+          "records": 218,
+          "percentage": 33.7,
+          "severity_weight": 1250.27
+        },
+        {
+          "opportunity": "less_repeat_mode",
+          "records": 123,
+          "percentage": 19.0,
+          "severity_weight": 639.41
+        },
+        {
+          "opportunity": "deep_discovery",
+          "records": 98,
+          "percentage": 15.1,
+          "severity_weight": 452.34
+        },
+        {
+          "opportunity": "freshness_control",
+          "records": 88,
+          "percentage": 13.6,
+          "severity_weight": 422.57
+        },
+        {
+          "opportunity": "mood_aware_discovery",
+          "records": 46,
+          "percentage": 7.1,
+          "severity_weight": 182.88
+        },
+        {
+          "opportunity": "playlist_refresh",
+          "records": 32,
+          "percentage": 4.9,
+          "severity_weight": 144.33
+        },
+        {
+          "opportunity": "discovery_explanation",
+          "records": 27,
+          "percentage": 4.2,
+          "severity_weight": 112.2
+        },
+        {
+          "opportunity": "language_aware_discovery",
+          "records": 15,
+          "percentage": 2.3,
+          "severity_weight": 55.13
+        }
+      ],
+      "subscription_signals": [
+        {
+          "subscription": "premium",
+          "records": 156,
+          "percentage": 64.2,
+          "severity_weight": 828.09
+        },
+        {
+          "subscription": "free",
+          "records": 87,
+          "percentage": 35.8,
+          "severity_weight": 355.76
+        }
+      ],
+      "segment_issue_map": [
+        {
+          "segment": "comfort_listener",
+          "records": 17,
+          "top_repeat_driver": "habit_loop",
+          "top_discovery_failure": "taste_profile_outdated",
+          "top_goal": "comfort_listening",
+          "average_severity": 1.94
+        },
+        {
+          "segment": "playlist_heavy_user",
+          "records": 108,
+          "top_repeat_driver": "playlist_dependency",
+          "top_discovery_failure": "shuffle_non_random",
+          "top_goal": "comfort_listening",
+          "average_severity": 2.64
+        },
+        {
+          "segment": "active_explorer",
+          "records": 94,
+          "top_repeat_driver": "algorithmic_reinforcement",
+          "top_discovery_failure": "too_mainstream",
+          "top_goal": "taste_expansion",
+          "average_severity": 2.56
+        },
+        {
+          "segment": "mood_based_listener",
+          "records": 16,
+          "top_repeat_driver": "algorithmic_reinforcement",
+          "top_discovery_failure": "mood_mismatch",
+          "top_goal": "activity_based_listening",
+          "average_severity": 2
+        },
+        {
+          "segment": "regional_language_listener",
+          "records": 9,
+          "top_repeat_driver": "not_enough_signal",
+          "top_discovery_failure": "regional_mismatch",
+          "top_goal": "deep_exploration",
+          "average_severity": 1.78
+        },
+        {
+          "segment": "artist_loyal_user",
+          "records": 19,
+          "top_repeat_driver": "weak_exploration_controls",
+          "top_discovery_failure": "mood_mismatch",
+          "top_goal": "comfort_listening",
+          "average_severity": 2.42
+        },
+        {
+          "segment": "casual_listener",
+          "records": 18,
+          "top_repeat_driver": "algorithmic_reinforcement",
+          "top_discovery_failure": "mood_mismatch",
+          "top_goal": "comfort_listening",
+          "average_severity": 1.5
+        },
+        {
+          "segment": "premium_power_user",
+          "records": 78,
+          "top_repeat_driver": "algorithmic_reinforcement",
+          "top_discovery_failure": "taste_profile_outdated",
+          "top_goal": "passive_freshness",
+          "average_severity": 2.97
+        },
+        {
+          "segment": "unclassified",
+          "records": 448,
+          "top_repeat_driver": "algorithmic_reinforcement",
+          "top_discovery_failure": "same_songs_repeating",
+          "top_goal": "taste_expansion",
+          "average_severity": 2.71
+        }
+      ]
+    },
+    "synthesis": {
+      "dominant_barrier": "algorithmic",
+      "dominant_pm_barrier": "repetition_fatigue",
+      "dominant_frustration": "filter_bubble_lock_in",
+      "dominant_discovery_mode": "lean_back",
+      "unmet_need_signal_count": 954,
+      "churn_risk_records": 495,
+      "churn_risk_rate": 61.3,
+      "average_severity": 2.63,
+      "total_signal_weight": 1411.41,
+      "model_note": "Charts are weighted by issue severity and source signal strength. Upvotes, likes, replies, and thread discussion raise priority; low-confidence extractions are excluded."
+    },
+    "dashboard": {
+      "source_counts": [
+        {
+          "source": "reddit",
+          "records": 245
+        },
+        {
+          "source": "spotify_community",
+          "records": 242
+        },
+        {
+          "source": "app_store",
+          "records": 154
+        },
+        {
+          "source": "play_store",
+          "records": 129
+        },
+        {
+          "source": "youtube",
+          "records": 37
+        }
+      ],
+      "source_barrier_matrix": [
+        {
+          "source": "app_store",
+          "barrier": "algorithmic",
+          "severity_weight": 419.44
+        },
+        {
+          "source": "app_store",
+          "barrier": "trust",
+          "severity_weight": 15.34
+        },
+        {
+          "source": "app_store",
+          "barrier": "unclear",
+          "severity_weight": 77.31
+        },
+        {
+          "source": "app_store",
+          "barrier": "surface",
+          "severity_weight": 18.86
+        },
+        {
+          "source": "app_store",
+          "barrier": "cognitive",
+          "severity_weight": 22.55
+        },
+        {
+          "source": "play_store",
+          "barrier": "algorithmic",
+          "severity_weight": 423.75
+        },
+        {
+          "source": "play_store",
+          "barrier": "unclear",
+          "severity_weight": 67.72
+        },
+        {
+          "source": "play_store",
+          "barrier": "surface",
+          "severity_weight": 17.53
+        },
+        {
+          "source": "play_store",
+          "barrier": "trust",
+          "severity_weight": 6.39
+        },
+        {
+          "source": "play_store",
+          "barrier": "cognitive",
+          "severity_weight": 7.42
+        },
+        {
+          "source": "reddit",
+          "barrier": "algorithmic",
+          "severity_weight": 935.47
+        },
+        {
+          "source": "reddit",
+          "barrier": "trust",
+          "severity_weight": 209.69
+        },
+        {
+          "source": "reddit",
+          "barrier": "unclear",
+          "severity_weight": 144.79
+        },
+        {
+          "source": "reddit",
+          "barrier": "cognitive",
+          "severity_weight": 51.35
+        },
+        {
+          "source": "reddit",
+          "barrier": "surface",
+          "severity_weight": 97.57
+        },
+        {
+          "source": "spotify_community",
+          "barrier": "algorithmic",
+          "severity_weight": 631.3
+        },
+        {
+          "source": "spotify_community",
+          "barrier": "trust",
+          "severity_weight": 193.69
+        },
+        {
+          "source": "spotify_community",
+          "barrier": "unclear",
+          "severity_weight": 52.77
+        },
+        {
+          "source": "spotify_community",
+          "barrier": "cognitive",
+          "severity_weight": 86.49
+        },
+        {
+          "source": "spotify_community",
+          "barrier": "surface",
+          "severity_weight": 70.4
+        },
+        {
+          "source": "youtube",
+          "barrier": "trust",
+          "severity_weight": 21.7
+        },
+        {
+          "source": "youtube",
+          "barrier": "unclear",
+          "severity_weight": 29.0
+        },
+        {
+          "source": "youtube",
+          "barrier": "algorithmic",
+          "severity_weight": 81.14
+        }
+      ],
+      "cross_source_frustrations": [
+        {
+          "frustration": "context_unawareness",
+          "source_count": 5,
+          "sources": [
+            "app_store",
+            "play_store",
+            "reddit",
+            "spotify_community",
+            "youtube"
+          ]
+        },
+        {
+          "frustration": "filter_bubble_lock_in",
+          "source_count": 5,
+          "sources": [
+            "app_store",
+            "play_store",
+            "reddit",
+            "spotify_community",
+            "youtube"
+          ]
+        },
+        {
+          "frustration": "popularity_bias",
+          "source_count": 5,
+          "sources": [
+            "app_store",
+            "play_store",
+            "reddit",
+            "spotify_community",
+            "youtube"
+          ]
+        },
+        {
+          "frustration": "recommendation_opacity",
+          "source_count": 5,
+          "sources": [
+            "app_store",
+            "play_store",
+            "reddit",
+            "spotify_community",
+            "youtube"
+          ]
+        },
+        {
+          "frustration": "autoplay_regression",
+          "source_count": 5,
+          "sources": [
+            "app_store",
+            "play_store",
+            "reddit",
+            "spotify_community",
+            "youtube"
+          ]
+        },
+        {
+          "frustration": "wrong_context_genre_blending",
+          "source_count": 5,
+          "sources": [
+            "app_store",
+            "play_store",
+            "reddit",
+            "spotify_community",
+            "youtube"
+          ]
+        },
+        {
+          "frustration": "taste_model_staleness",
+          "source_count": 4,
+          "sources": [
+            "app_store",
+            "play_store",
+            "reddit",
+            "spotify_community"
+          ]
+        },
+        {
+          "frustration": "unclear",
+          "source_count": 3,
+          "sources": [
+            "app_store",
+            "reddit",
+            "spotify_community"
+          ]
+        },
+        {
+          "frustration": "radio_too_narrow",
+          "source_count": 1,
+          "sources": [
+            "reddit"
+          ]
+        }
+      ],
+      "quote_bank": [
+        {
+          "quote": "Spotify Premium member since 2011, planning on leaving for the first time - AI artists in my Discover Weekly",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "high",
+          "barrier": "trust",
+          "severity": 5,
+          "signal_weight": 2.9,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1m6cke2"
+        },
+        {
+          "quote": "Today I turned Discover Weekly on and by far 70% of the playlist is AI slop. And you know what? These people that create this music, they don't even try to be original.",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "barrier": "trust",
+          "severity": 5,
+          "signal_weight": 2.881,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1qtqd7m"
+        },
+        {
+          "quote": "I got tired of Spotify's algorithm pushing fake AI artists, so I built a tracker.",
+          "source": "reddit",
+          "segment": "premium_power_user",
+          "intensity": "high",
+          "barrier": "trust",
+          "severity": 5,
+          "signal_weight": 2.857,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1s0ymoo"
+        },
+        {
+          "quote": "for years I tried to understand why my suggestion algorithm was basically showing me the same artists as 2019 and never something new.",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "barrier": "algorithmic",
+          "severity": 5,
+          "signal_weight": 2.817,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1rp2wgo"
+        },
+        {
+          "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences.",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "barrier": "algorithmic",
+          "severity": 5,
+          "signal_weight": 2.557,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1mij33x"
+        },
+        {
+          "quote": "The music recommendations keep showing me the same songs over and over again, and all of them are ones I don't enjoy. I haven't found any new songs I like for two months now. I desperately need a solution, or a new music streaming app",
+          "source": "reddit",
+          "segment": "active_explorer",
+          "intensity": "high",
+          "barrier": "algorithmic",
+          "severity": 5,
+          "signal_weight": 2.528,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1to5rk0"
+        },
+        {
+          "quote": "the algorithm just gives you the same stuff over and over, but I’m wondering if anyone has found a way around it. My wife says Apple Music is amazing for new recommendations so I’m tempted to move over",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "barrier": "algorithmic",
+          "severity": 5,
+          "signal_weight": 2.497,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1qxgrgn"
+        },
+        {
+          "quote": "Spotify keeps recommending me music I hate.",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "barrier": "algorithmic",
+          "severity": 5,
+          "signal_weight": 2.404,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1neseph"
+        },
+        {
+          "quote": "I think is time to stop paying Spotify.",
+          "source": "reddit",
+          "segment": "artist_loyal_user",
+          "intensity": "medium",
+          "barrier": "surface",
+          "severity": 5,
+          "signal_weight": 2.384,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1reupnf"
+        },
+        {
+          "quote": "it feels like Spotify only wants to push whatever song is currently blowing up on TikTok/Instagram. Whenever I'm on auto play, it doesn't matter what genre of music I start with somehow my recommendation queue always circles back to viral TikTok tracks.",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "low",
+          "barrier": "algorithmic",
+          "severity": 5,
+          "signal_weight": 2.359,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1tgsmq5"
+        },
+        {
+          "quote": "Spotify is recommending me AI albums impersonating an inactive artist",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "low",
+          "barrier": "trust",
+          "severity": 5,
+          "signal_weight": 2.328,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1tyrxlv"
+        },
+        {
+          "quote": "I became more and more annoyed at the shuffle, I have one big playlist with more than 8000 songs in it... but I've noticed that it just kept repeating the same ~300 songs on shuffle and never played the others",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "low",
+          "barrier": "algorithmic",
+          "severity": 5,
+          "signal_weight": 2.327,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1tdnt3m"
+        },
+        {
+          "quote": "Spotify could say that their algorithm is learning. But for who? Who asked for this?",
+          "source": "reddit",
+          "segment": "premium_power_user",
+          "intensity": "high",
+          "barrier": "algorithmic",
+          "severity": 4,
+          "signal_weight": 2.9,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1sq5c02"
+        },
+        {
+          "quote": "So this is what I usually do to basically force Spotify into giving me new songs:",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "high",
+          "barrier": "trust",
+          "severity": 4,
+          "signal_weight": 2.893,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1qbcg5k"
+        },
+        {
+          "quote": "I am sick and tired of blocking ~5 new artists in every single 30-track \"Discover Weekly\" feed. This feed used to be a goldmine of good music, and now it's a minefield of mediocrity",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "barrier": "algorithmic",
+          "severity": 4,
+          "signal_weight": 2.876,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1md8bxx"
+        },
+        {
+          "quote": "Literally 50% of recommended songs are Ai.",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "barrier": "trust",
+          "severity": 4,
+          "signal_weight": 2.817,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1u1u2s4"
+        },
+        {
+          "quote": "“Fans also like” often feels extremely surface-level and popularity-driven rather than musically relevant",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "high",
+          "barrier": "surface",
+          "severity": 4,
+          "signal_weight": 2.799,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1tvxxi5"
+        },
+        {
+          "quote": "It's like it creates one limited profile for a user, then doesn't bother offering anything outside that little prison.",
+          "source": "reddit",
+          "segment": "active_explorer",
+          "intensity": "medium",
+          "barrier": "algorithmic",
+          "severity": 4,
+          "signal_weight": 2.776,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1s4ci04"
+        },
+        {
+          "quote": "it kind of hit me how easy it is to let algorithms quietly narrow your taste.",
+          "source": "reddit",
+          "segment": "active_explorer",
+          "intensity": "high",
+          "barrier": "algorithmic",
+          "severity": 4,
+          "signal_weight": 2.728,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1otakq9"
+        },
+        {
+          "quote": "I prefer YouTube music over anything. The streaming quality is decent and the recommendations are spot on",
+          "source": "youtube",
+          "segment": "unclassified",
+          "intensity": "low",
+          "barrier": "trust",
+          "severity": 4,
+          "signal_weight": 2.707,
+          "churn_risk": true,
+          "record_id": "youtube_comment:UgwP6OXSBGQ7uZ9tL-t4AaABAg"
+        },
+        {
+          "quote": "So I realized that for me, it always pushed me to listen the same albums, over and over. ... I've just cancelled my Spotify family subscription",
+          "source": "reddit",
+          "segment": "premium_power_user",
+          "intensity": "medium",
+          "barrier": "algorithmic",
+          "severity": 5,
+          "signal_weight": 2.149,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1n29ycw"
+        },
+        {
+          "quote": "Now whenever I open Spotify I just sit there not knowing what to play anymore someone please help me fix my spotify life",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "barrier": "cognitive",
+          "severity": 4,
+          "signal_weight": 2.684,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1ti0rxg"
+        },
+        {
+          "quote": "Support suggested I create a new account and transfer all my data, but that would mean losing 7 years of listening history and algorithm progress, which is not an acceptable “fix.”",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "barrier": "algorithmic",
+          "severity": 5,
+          "signal_weight": 2.147,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1o02e6p"
+        },
+        {
+          "quote": "If you feel like you're missing new music on Spotify, I built something that might help",
+          "source": "reddit",
+          "segment": "active_explorer",
+          "intensity": "high",
+          "barrier": "surface",
+          "severity": 4,
+          "signal_weight": 2.671,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1nnuzh6"
+        },
+        {
+          "quote": "Now Spotify just recommends the same songs in my other playlists regardless of if they're even the same genre as the playlist I'm trying to build.",
+          "source": "reddit",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "barrier": "algorithmic",
+          "severity": 4,
+          "signal_weight": 2.637,
+          "churn_risk": true,
+          "record_id": "reddit_post:t3_1rml2vo"
+        }
+      ],
+      "goldmine_records": [
+        {
+          "record_id": "reddit_post:t3_1qtqd7m",
+          "source": "reddit",
+          "score": 16.11,
+          "severity": 5,
+          "signal_weight": 2.881,
+          "engagement_score": 0.987,
+          "conversation_score": 0.985,
+          "barrier": "trust",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "quote": "Today I turned Discover Weekly on and by far 70% of the playlist is AI slop. And you know what? These people that create this music, they don't even try to be original."
+        },
+        {
+          "record_id": "reddit_post:t3_1m6cke2",
+          "source": "reddit",
+          "score": 15.85,
+          "severity": 5,
+          "signal_weight": 2.9,
+          "engagement_score": 1.0,
+          "conversation_score": 1.0,
+          "barrier": "trust",
+          "segment": "unclassified",
+          "intensity": "high",
+          "quote": "Spotify Premium member since 2011, planning on leaving for the first time - AI artists in my Discover Weekly"
+        },
+        {
+          "record_id": "reddit_post:t3_1rp2wgo",
+          "source": "reddit",
+          "score": 15.79,
+          "severity": 5,
+          "signal_weight": 2.817,
+          "engagement_score": 1.0,
+          "conversation_score": 1.0,
+          "barrier": "algorithmic",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "quote": "for years I tried to understand why my suggestion algorithm was basically showing me the same artists as 2019 and never something new."
+        },
+        {
+          "record_id": "reddit_post:t3_1s0ymoo",
+          "source": "reddit",
+          "score": 15.63,
+          "severity": 5,
+          "signal_weight": 2.857,
+          "engagement_score": 1.0,
+          "conversation_score": 0.938,
+          "barrier": "trust",
+          "segment": "premium_power_user",
+          "intensity": "high",
+          "quote": "I got tired of Spotify's algorithm pushing fake AI artists, so I built a tracker."
+        },
+        {
+          "record_id": "reddit_post:t3_1mij33x",
+          "source": "reddit",
+          "score": 14.48,
+          "severity": 5,
+          "signal_weight": 2.557,
+          "engagement_score": 0.856,
+          "conversation_score": 0.762,
+          "barrier": "algorithmic",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "quote": "if I want to listen to a specific genre or era in order to find songs I don't listen to often, or discover something I haven't heard before, I want a curated playlist -- not something that's already conforming to my preferences."
+        },
+        {
+          "record_id": "reddit_post:t3_1to5rk0",
+          "source": "reddit",
+          "score": 14.34,
+          "severity": 5,
+          "signal_weight": 2.528,
+          "engagement_score": 0.556,
+          "conversation_score": 0.881,
+          "barrier": "algorithmic",
+          "segment": "active_explorer",
+          "intensity": "high",
+          "quote": "The music recommendations keep showing me the same songs over and over again, and all of them are ones I don't enjoy. I haven't found any new songs I like for two months now. I desperately need a solution, or a new music streaming app"
+        },
+        {
+          "record_id": "reddit_post:t3_1qxgrgn",
+          "source": "reddit",
+          "score": 14.18,
+          "severity": 5,
+          "signal_weight": 2.497,
+          "engagement_score": 0.476,
+          "conversation_score": 0.911,
+          "barrier": "algorithmic",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "quote": "the algorithm just gives you the same stuff over and over, but I’m wondering if anyone has found a way around it. My wife says Apple Music is amazing for new recommendations so I’m tempted to move over"
+        },
+        {
+          "record_id": "reddit_post:t3_1neseph",
+          "source": "reddit",
+          "score": 13.72,
+          "severity": 5,
+          "signal_weight": 2.404,
+          "engagement_score": 0.572,
+          "conversation_score": 0.689,
+          "barrier": "algorithmic",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "quote": "Spotify keeps recommending me music I hate."
+        },
+        {
+          "record_id": "reddit_post:t3_1tgsmq5",
+          "source": "reddit",
+          "score": 13.49,
+          "severity": 5,
+          "signal_weight": 2.359,
+          "engagement_score": 0.587,
+          "conversation_score": 0.61,
+          "barrier": "algorithmic",
+          "segment": "unclassified",
+          "intensity": "low",
+          "quote": "it feels like Spotify only wants to push whatever song is currently blowing up on TikTok/Instagram. Whenever I'm on auto play, it doesn't matter what genre of music I start with somehow my recommendation queue always circles back to viral TikTok tracks."
+        },
+        {
+          "record_id": "reddit_post:t3_1tdnt3m",
+          "source": "reddit",
+          "score": 12.98,
+          "severity": 5,
+          "signal_weight": 2.327,
+          "engagement_score": 0.388,
+          "conversation_score": 0.749,
+          "barrier": "algorithmic",
+          "segment": "unclassified",
+          "intensity": "low",
+          "quote": "I became more and more annoyed at the shuffle, I have one big playlist with more than 8000 songs in it... but I've noticed that it just kept repeating the same ~300 songs on shuffle and never played the others"
+        },
+        {
+          "record_id": "reddit_post:t3_1sq5c02",
+          "source": "reddit",
+          "score": 12.95,
+          "severity": 4,
+          "signal_weight": 2.9,
+          "engagement_score": 1.0,
+          "conversation_score": 1.0,
+          "barrier": "algorithmic",
+          "segment": "premium_power_user",
+          "intensity": "high",
+          "quote": "Spotify could say that their algorithm is learning. But for who? Who asked for this?"
+        },
+        {
+          "record_id": "reddit_post:t3_1qbcg5k",
+          "source": "reddit",
+          "score": 12.92,
+          "severity": 4,
+          "signal_weight": 2.893,
+          "engagement_score": 1.0,
+          "conversation_score": 0.99,
+          "barrier": "trust",
+          "segment": "unclassified",
+          "intensity": "high",
+          "quote": "So this is what I usually do to basically force Spotify into giving me new songs:"
+        },
+        {
+          "record_id": "reddit_post:t3_1reupnf",
+          "source": "reddit",
+          "score": 12.92,
+          "severity": 5,
+          "signal_weight": 2.384,
+          "engagement_score": 0.788,
+          "conversation_score": 0.774,
+          "barrier": "surface",
+          "segment": "artist_loyal_user",
+          "intensity": "medium",
+          "quote": "I think is time to stop paying Spotify."
+        },
+        {
+          "record_id": "reddit_post:t3_1tvxxi5",
+          "source": "reddit",
+          "score": 12.9,
+          "severity": 4,
+          "signal_weight": 2.799,
+          "engagement_score": 0.982,
+          "conversation_score": 0.99,
+          "barrier": "surface",
+          "segment": "unclassified",
+          "intensity": "high",
+          "quote": "“Fans also like” often feels extremely surface-level and popularity-driven rather than musically relevant"
+        },
+        {
+          "record_id": "reddit_post:t3_1md8bxx",
+          "source": "reddit",
+          "score": 12.85,
+          "severity": 4,
+          "signal_weight": 2.876,
+          "engagement_score": 0.963,
+          "conversation_score": 1.0,
+          "barrier": "algorithmic",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "quote": "I am sick and tired of blocking ~5 new artists in every single 30-track \"Discover Weekly\" feed. This feed used to be a goldmine of good music, and now it's a minefield of mediocrity"
+        },
+        {
+          "record_id": "reddit_post:t3_1s4ci04",
+          "source": "reddit",
+          "score": 12.8,
+          "severity": 4,
+          "signal_weight": 2.776,
+          "engagement_score": 0.941,
+          "conversation_score": 0.995,
+          "barrier": "algorithmic",
+          "segment": "active_explorer",
+          "intensity": "medium",
+          "quote": "It's like it creates one limited profile for a user, then doesn't bother offering anything outside that little prison."
+        },
+        {
+          "record_id": "reddit_post:t3_1tyrxlv",
+          "source": "reddit",
+          "score": 12.64,
+          "severity": 5,
+          "signal_weight": 2.328,
+          "engagement_score": 0.722,
+          "conversation_score": 0.559,
+          "barrier": "trust",
+          "segment": "unclassified",
+          "intensity": "low",
+          "quote": "Spotify is recommending me AI albums impersonating an inactive artist"
+        },
+        {
+          "record_id": "reddit_post:t3_1u1u2s4",
+          "source": "reddit",
+          "score": 12.62,
+          "severity": 4,
+          "signal_weight": 2.817,
+          "engagement_score": 1.0,
+          "conversation_score": 1.0,
+          "barrier": "trust",
+          "segment": "unclassified",
+          "intensity": "medium",
+          "quote": "Literally 50% of recommended songs are Ai."
+        },
+        {
+          "record_id": "reddit_post:t3_1otakq9",
+          "source": "reddit",
+          "score": 12.61,
+          "severity": 4,
+          "signal_weight": 2.728,
+          "engagement_score": 0.947,
+          "conversation_score": 1.0,
+          "barrier": "algorithmic",
+          "segment": "active_explorer",
+          "intensity": "high",
+          "quote": "it kind of hit me how easy it is to let algorithms quietly narrow your taste."
+        },
+        {
+          "record_id": "reddit_post:t3_1nnuzh6",
+          "source": "reddit",
+          "score": 12.38,
+          "severity": 4,
+          "signal_weight": 2.671,
+          "engagement_score": 0.97,
+          "conversation_score": 0.819,
+          "barrier": "surface",
+          "segment": "active_explorer",
+          "intensity": "high",
+          "quote": "If you feel like you're missing new music on Spotify, I built something that might help"
+        }
+      ],
+      "validation": {
+        "records": 807,
+        "source_total": 807,
+        "q5_matrix_total": 807,
+        "segment_total": 807,
+        "classified_counts": {
+          "unclassified": 448,
+          "regional_language_listener": 9,
+          "active_explorer": 94,
+          "casual_listener": 18,
+          "playlist_heavy_user": 108,
+          "premium_power_user": 78,
+          "mood_based_listener": 16,
+          "comfort_listener": 17,
+          "artist_loyal_user": 19
+        },
+        "valid": true,
+        "issues": []
+      }
+    }
+  }
+}

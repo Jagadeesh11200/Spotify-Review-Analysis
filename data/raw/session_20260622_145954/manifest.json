@@ -1,0 +1,108 @@
+{
+  "session_id": "session_20260622_145954",
+  "generated_at": "2026-06-22T15:02:16.888003+00:00",
+  "config": {
+    "date_range": {
+      "from": "2025-03-06",
+      "to": "2026-06-22"
+    },
+    "target_usable_per_source": 300,
+    "candidate_limit_per_source": 600,
+    "configured_usable_target_per_source": 300,
+    "min_words": 20,
+    "enabled_sources": [
+      "app_store",
+      "play_store",
+      "reddit",
+      "youtube",
+      "spotify_community"
+    ]
+  },
+  "sources": [
+    {
+      "source": "app_store",
+      "raw_count": 442,
+      "usable_count": 300,
+      "filtered_count": 142,
+      "output_path": "data\\raw\\session_20260622_145954\\app_store.json",
+      "searches": [],
+      "errors": []
+    },
+    {
+      "source": "play_store",
+      "raw_count": 437,
+      "usable_count": 300,
+      "filtered_count": 137,
+      "output_path": "data\\raw\\session_20260622_145954\\play_store.json",
+      "searches": [],
+      "errors": []
+    },
+    {
+      "source": "reddit",
+      "raw_count": 309,
+      "usable_count": 300,
+      "filtered_count": 9,
+      "output_path": "data\\raw\\session_20260622_145954\\reddit.json",
+      "searches": [
+        "spotify recommendations",
+        "spotify algorithm",
+        "spotify discover weekly",
+        "spotify same songs",
+        "spotify music discovery",
+        "spotify discover weekly recommendations",
+        "spotify algorithm same songs over and over",
+        "spotify cant find new music similar artists",
+        "spotify recommendations dont match my taste",
+        "spotify genre wrong mainstream boring",
+        "spotify ai dj repeats songs",
+        "spotify taste profile ruined recommendations",
+        "spotify music discovery workaround playlist radio",
+        "spotify switched to apple music recommendations discovery"
+      ],
+      "errors": []
+    },
+    {
+      "source": "youtube",
+      "raw_count": 570,
+      "usable_count": 300,
+      "filtered_count": 270,
+      "output_path": "data\\raw\\session_20260622_145954\\youtube.json",
+      "searches": [
+        "Spotify recommendations same songs",
+        "Spotify algorithm bad recommendations",
+        "Spotify Discover Weekly got worse",
+        "Spotify AI DJ repeating songs",
+        "Spotify taste profile recommendations",
+        "Why Spotify keeps playing the same songs",
+        "Spotify music discovery alternatives",
+        "How to discover new music on Spotify"
+      ],
+      "errors": []
+    },
+    {
+      "source": "spotify_community",
+      "raw_count": 349,
+      "usable_count": 300,
+      "filtered_count": 49,
+      "output_path": "data\\raw\\session_20260622_145954\\spotify_community.json",
+      "searches": [
+        "recommendations",
+        "music discovery",
+        "algorithm recommendations",
+        "repeating songs",
+        "playlist recommendations",
+        "bad recommendations",
+        "same songs recommendations",
+        "Discover Weekly same songs",
+        "AI DJ repeats songs",
+        "taste profile recommendations",
+        "autoplay repeats same songs",
+        "radio recommendations same artists",
+        "feature request music discovery"
+      ],
+      "errors": []
+    }
+  ],
+  "total_raw": 2107,
+  "total_usable": 1500
+}
