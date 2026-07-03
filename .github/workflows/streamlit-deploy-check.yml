@@ -1,0 +1,84 @@
+name: Streamlit deploy check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: streamlit-deploy-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate app
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip check
+
+      - name: Compile deployment-critical modules
+        run: |
+          python -m py_compile app.py src/config.py src/analysis/pipeline.py src/default_session.py src/analysis/interactive_dashboard.py
+
+      - name: Verify packaged default dashboard data
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from src.default_session import load_default_run
+
+          required = [
+              Path("runtime.txt"),
+              Path(".streamlit/config.toml"),
+              Path("data/default_session.json"),
+              Path("data/raw/session_20260622_145954/manifest.json"),
+              Path("data/analysis/session_20260622_145954/extractions.json"),
+          ]
+          missing = [str(path) for path in required if not path.exists()]
+          if missing:
+              raise SystemExit(f"Missing deployment files: {missing}")
+
+          loaded = load_default_run()
+          if loaded is None:
+              raise SystemExit("Packaged default run could not be loaded.")
+          ingestion, analysis = loaded
+          assert ingestion.total_usable == 1500, ingestion.total_usable
+          assert len(analysis.get("extractions", [])) == 1500
+          PY
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Streamlit startup smoke
+        run: |
+          streamlit run app.py --server.headless true --server.port 8501 --browser.gatherUsageStats false > streamlit.log 2>&1 &
+          STREAMLIT_PID=$!
+          for attempt in {1..30}; do
+            if curl -fsS http://localhost:8501/_stcore/health > /dev/null; then
+              kill "$STREAMLIT_PID"
+              wait "$STREAMLIT_PID" || true
+              exit 0
+            fi
+            sleep 1
+          done
+          cat streamlit.log
+          kill "$STREAMLIT_PID" || true
+          exit 1

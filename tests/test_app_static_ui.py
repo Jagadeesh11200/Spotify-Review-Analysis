@@ -31,3 +31,9 @@ def test_default_analysis_prompt_offers_blank_tool_link():
     assert "font-size: 18px;" in APP_SOURCE
     assert "border-radius: 999px;" in APP_SOURCE
     assert "box-shadow: 0 5px 14px" in APP_SOURCE
+
+
+def test_homepage_exposes_repository_reference():
+    assert "Project repository" in APP_SOURCE
+    assert "https://github.com/Jagadeesh11200/Spotify-Review-Analysis/" in APP_SOURCE
+    assert "Code and deployment reference" in APP_SOURCE

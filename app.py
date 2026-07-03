@@ -132,7 +132,7 @@ def apply_home_style() -> None:
         }
         .home-links {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 10px;
             margin: 4px 0 14px;
         }
@@ -538,6 +538,26 @@ def render_default_analysis_prompt() -> None:
                     <strong>{ingestion_result.total_usable:,}</strong>
                     <span>meaningful records analyzed</span>
                 </div>
+            </div>
+            <div class="home-help-item">
+                <details>
+                    <summary>
+                        <div class="home-help-top">
+                            <div class="home-help-title">
+                                <strong>Project repository</strong>
+                                <span>Code and deployment reference</span>
+                            </div>
+                            <a class="home-help-link" href="https://github.com/Jagadeesh11200/Spotify-Review-Analysis/" target="_blank" rel="noopener">Open repo</a>
+                        </div>
+                    </summary>
+                    <div class="home-help-body">
+                        <ul>
+                            <li>Source code, tests, and deployment workflow</li>
+                            <li>Packaged default dashboard data</li>
+                            <li>Configuration and secret examples</li>
+                        </ul>
+                    </div>
+                </details>
             </div>
         </div>
         """,

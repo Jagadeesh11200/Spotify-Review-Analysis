@@ -47,3 +47,17 @@ streamlit run app.py
 ```
 
 For a headless smoke test, start Streamlit on a temporary port and confirm the root URL returns HTTP 200.
+
+## GitHub Push Workflow
+
+The repository includes `.github/workflows/streamlit-deploy-check.yml`.
+
+Every push or pull request to `main` runs:
+
+- dependency installation and `pip check`
+- Python compile checks for deployment-critical modules
+- packaged default-data verification
+- full test suite
+- headless Streamlit startup health check
+
+For Streamlit Community Cloud, connect the app to the GitHub repository and `main` branch. After that, each push to `main` triggers Streamlit's normal redeploy/update flow, while GitHub Actions provides the validation gate.

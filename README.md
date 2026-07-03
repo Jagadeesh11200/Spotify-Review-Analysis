@@ -77,6 +77,21 @@ streamlit run app.py
 - Fresh user-triggered runs write new generated files under `data/raw/session_*` and `data/analysis/session_*`. These generated runs are intentionally ignored by Git.
 - The default dashboard can open without live API secrets. Fresh collection and analysis require the relevant source secrets listed above.
 
+## GitHub Automation
+
+The repository includes `.github/workflows/streamlit-deploy-check.yml`.
+
+On every push or pull request to `main`, GitHub Actions:
+
+- installs dependencies on Python 3.12,
+- runs `pip check`,
+- compiles deployment-critical modules,
+- verifies the packaged default dashboard data,
+- runs the full test suite,
+- starts Streamlit headlessly and checks the health endpoint.
+
+When the app is connected to Streamlit Community Cloud, pushes to the deployed branch trigger Streamlit's normal app update flow. The GitHub workflow is the deployment safety gate that catches broken code or missing packaged data before the deployed app is reviewed.
+
 ## Phase 1 Output
 
 Each run creates a folder under `data/raw/session_YYYYMMDD_HHMMSS` with one JSON file per enabled source and a `manifest.json`. The Streamlit UI asks for a meaningful-record target per source, then over-collects candidates internally so the post-filter count can land within about 5% of that target when enough public feedback is available.
