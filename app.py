@@ -132,9 +132,50 @@ def apply_home_style() -> None:
         }
         .home-links {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 10px;
             margin: 4px 0 14px;
+        }
+        .repo-reference {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid rgba(29,185,84,.24);
+            border-radius: 8px;
+            background: linear-gradient(135deg, #fff, rgba(29,185,84,.055));
+            padding: 13px 15px;
+            margin: -2px 0 16px;
+            box-shadow: 0 5px 16px rgba(24,32,27,.04);
+        }
+        .repo-reference strong {
+            display: block;
+            color: var(--ink);
+            font-size: 15px;
+            line-height: 1.25;
+        }
+        .repo-reference span {
+            display: block;
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 3px;
+        }
+        .repo-reference a {
+            white-space: nowrap;
+            color: #fff;
+            background: var(--spotify-green-dark);
+            border: 1px solid var(--spotify-green-dark);
+            border-radius: 999px;
+            padding: 7px 13px;
+            font-size: 12px;
+            font-weight: 850;
+            text-decoration: none;
+            box-shadow: 0 5px 14px rgba(19,122,58,.16);
+        }
+        .repo-reference a:hover {
+            background: var(--spotify-green);
+            border-color: var(--spotify-green);
+            color: #fff;
         }
         .default-analysis-card {
             border: 1px solid rgba(29,185,84,.28);
@@ -458,6 +499,10 @@ def apply_home_style() -> None:
             .home-links {
                 grid-template-columns: 1fr;
             }
+            .repo-reference {
+                align-items: flex-start;
+                flex-direction: column;
+            }
             .doc-architecture {
                 grid-template-columns: 1fr;
             }
@@ -499,19 +544,31 @@ def load_default_run_into_state() -> None:
 
 
 def apply_fresh_tool_request() -> None:
-    fresh_value = st.query_params.get("fresh_run")
-    if isinstance(fresh_value, list):
-        fresh_requested = "1" in fresh_value
-    else:
-        fresh_requested = str(fresh_value or "") == "1"
-    if not fresh_requested and not st.session_state.get(FRESH_TOOL_KEY):
+    fresh_requested = is_fresh_run_requested(st.query_params)
+    if st.session_state.get(FRESH_TOOL_KEY):
+        st.session_state[DEFAULT_RUN_LOADED_KEY] = True
+        if st.session_state.get("app_page") not in PAGE_OPTIONS:
+            st.session_state["app_page"] = COLLECT_PAGE
+        return
+    if not fresh_requested:
         return
     st.session_state[FRESH_TOOL_KEY] = True
     st.session_state[DEFAULT_RUN_LOADED_KEY] = True
-    for key in ("current_ingestion_result", "current_session_dir", "analysis_result", "loaded_default_session_id"):
-        st.session_state.pop(key, None)
+    clear_loaded_run_state(st.session_state)
     if st.session_state.get("app_page") not in PAGE_OPTIONS:
         st.session_state["app_page"] = COLLECT_PAGE
+
+
+def is_fresh_run_requested(query_params: Any) -> bool:
+    fresh_value = query_params.get("fresh_run")
+    if isinstance(fresh_value, list):
+        return "1" in fresh_value
+    return str(fresh_value or "") == "1"
+
+
+def clear_loaded_run_state(state: dict[str, Any]) -> None:
+    for key in ("current_ingestion_result", "current_session_dir", "analysis_result", "loaded_default_session_id"):
+        state.pop(key, None)
 
 
 def render_default_analysis_prompt() -> None:
@@ -538,26 +595,6 @@ def render_default_analysis_prompt() -> None:
                     <strong>{ingestion_result.total_usable:,}</strong>
                     <span>meaningful records analyzed</span>
                 </div>
-            </div>
-            <div class="home-help-item">
-                <details>
-                    <summary>
-                        <div class="home-help-top">
-                            <div class="home-help-title">
-                                <strong>Project repository</strong>
-                                <span>Code and deployment reference</span>
-                            </div>
-                            <a class="home-help-link" href="https://github.com/Jagadeesh11200/Spotify-Review-Analysis/" target="_blank" rel="noopener">Open repo</a>
-                        </div>
-                    </summary>
-                    <div class="home-help-body">
-                        <ul>
-                            <li>Source code, tests, and deployment workflow</li>
-                            <li>Packaged default dashboard data</li>
-                            <li>Configuration and secret examples</li>
-                        </ul>
-                    </div>
-                </details>
             </div>
         </div>
         """,
@@ -660,6 +697,21 @@ def render_home_links() -> None:
                 </details>
             </div>
         </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_repo_reference() -> None:
+    st.markdown(
+        """
+        <section class="repo-reference">
+            <div>
+                <strong>Project repository</strong>
+                <span>Reference the source code, deployment workflow, packaged default data, and configuration examples.</span>
+            </div>
+            <a href="https://github.com/Jagadeesh11200/Spotify-Review-Analysis/" target="_blank" rel="noopener">Open GitHub repo</a>
+        </section>
         """,
         unsafe_allow_html=True,
     )
@@ -1126,6 +1178,7 @@ def main() -> None:
     render_app_header()
     render_default_analysis_prompt()
     render_home_links()
+    render_repo_reference()
     prepare_page_state(st.session_state)
     page = st.radio(
         "Page",

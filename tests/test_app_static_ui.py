@@ -34,6 +34,7 @@ def test_default_analysis_prompt_offers_blank_tool_link():
 
 
 def test_homepage_exposes_repository_reference():
+    assert "repo-reference" in APP_SOURCE
     assert "Project repository" in APP_SOURCE
     assert "https://github.com/Jagadeesh11200/Spotify-Review-Analysis/" in APP_SOURCE
-    assert "Code and deployment reference" in APP_SOURCE
+    assert "render_repo_reference()" in APP_SOURCE
